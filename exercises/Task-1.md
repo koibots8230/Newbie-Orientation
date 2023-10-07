@@ -8,7 +8,8 @@
  - Learn how to compile and run a program
 
 ## Instructions 
-1. Currently ```src/main/java/com/koibots/Main.java``` looks like this
+1. Currently ```src/main/java/com/koibots/Main.java``` looks like this:
+
     ```java
     package com.koibots;
 

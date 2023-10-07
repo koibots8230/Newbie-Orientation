@@ -11,7 +11,7 @@ Intro goes here
    + On your school MacBook run ```xcode-select --install``` to install Git
    + Otherwise, use the link above to download and install Git
 3. Clone this git repository
-4. Create a branch with your name by running <pre>git checkout -b <b><i>YourName</i></b></pre>
+4. Create a branch with your name by running `git checkout -b YourName`
 5. Start completing the exercises
 ---
 ## Exercises

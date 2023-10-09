@@ -30,10 +30,12 @@ public final class Constants {
    - Note: VS code *should* import Constants.java automatically, but if it doesn't, add `import com.koibots.Constants` just below the `package com.koibots`
 7. Run the program (If you don't remember)
 8. Your output should look like this:
-`
-  3
-  0.5
-`
+
+    3
+    0.5
+
+9. Add, commit and push your changes to your branch
+   - If the file has already been git add-ed previously, you can instead use git commit -am "Message" to add and commit at the same time :wink:
 
 ## Instructor notes
 - Have them work with the style guide

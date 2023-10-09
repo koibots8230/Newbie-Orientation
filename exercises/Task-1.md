@@ -21,20 +21,21 @@
     }
     ```
 2. Click the terminal button in the top, then hit "New Terminal"
-3. Run `./gradlew run` to see it print
-3. Run `git add *`
-4. Run `git commit -m "Exersise 1"`
-5. Run `git push`
-6. Follow any instructions it may give you
+3. Save your file
+4. Run `./gradlew run` to see it print
+5. Change the message to one of your choosing (school appropriate)
+6. Save the file
+7. In your terminal, run:
+    1. `git add *`
+    2. `git commit -m "Exersise 1"`
+    3. `git push`
+8. Follow any instructions it may give you
 
 
 
-## Addtl git commands (do your own research)
+## Addditional git commands (do your own research!)
 - `git checkout -b <branch_name>`
 - `git log -a`
 - `git branch -a`
 - `git fetch` vs. `git pull`
 - `git tag` on successful
-
-
-System.<Tab> .... out . <tab> ... 

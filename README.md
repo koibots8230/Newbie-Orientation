@@ -19,30 +19,32 @@ Intro goes here
 **Beginners Guide to Java and FRC Programming**
 1. [Hello World](exercises/Task-1.md)
 2. [Variables](exercises/Task-2.md) 
-3. [Conditionals & Expressions](exercises/Task-3.md) 
-4. [Loops](exercises/Task-4.md) 
-5. [Classes](exercises/Task-5.md) 
-6. [Object Oriented Programming](exercises/Task-6.md)
-7. [Extras](exercises/Task-7.md) 
-8. [Hello Robot](exercises/Task-8.md)
-9. [Motors & Encoders](exercises/Task-9.md)
-10. [Tank Drive](exercises/Task-10.md)
-11. [Command-Based Programming](exercises/Task-11.md)
+3. [Conditionals & Expressions](exercises/Task-3.md)
+4. [Data Structures](exercises/Task-4.md)
+5. [Loops](exercises/Task-5.md) 
+6. [Classes](exercises/Task-6.md)
+7. [Object Oriented Programming](exercises/Task-7.md)
+8. [Extras](exercises/Task-8.md)
+9. [Hello Robot](exercises/Task-9.md)
+10. [Motors & Encoders](exercises/Task-10.md)
+11. [Tank Drive](exercises/Task-11.md)
+12. [Command-Based Programming](exercises/Task-12.md)
 
 **More Advanced Concepts**
 
-12. [401's 2023 Robot](exercises/Task-12.md) 
-13. [Odometry](exercises/Task-13.md) 
-14. [PID Loops](exercises/Task-14.md)
-15. [Autonomous](exercises/Task-15.md)
-16. [Computer Vision](exercises/Task-16.md)
-17. [Kinematics](exercises/Task-17.md)
-18. [Simulation & Logging](exercises/Task-18.md)
+12. [401's 2023 Robot](exercises/Task-13.md) 
+13. [Odometry](exercises/Task-14.md) 
+14. [Simulation & Logging](exercises/Task-15.md)
+15. [Autonomous](exercises/Task-16.md)
+16. [PID Loops](exercises/Task-17.md)
+17. [Kinematics](exercises/Task-18.md)
+18. [Computer Vision](exercises/Task-19.md)
 
 ---
 
 ## Useful Resources
 
+ - [Harvard's CS50](https://www.youtube.com/playlist?list=PLhQjrBD2T380F_inVRXMIHCqLaNUd7bN4)
  - [W3Schools Java](https://www.w3schools.com/java/default.asp)
  - [WPILib Docs](https://docs.wpilib.org/en/stable/index.html)
  - [REVLib Docs](https://docs.revrobotics.com/sparkmax/software-resources/spark-max-api-information)

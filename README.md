@@ -17,28 +17,28 @@ Intro goes here
 ## Exercises
 
 **Beginners Guide to Java and FRC Programming**
-1. [Hello World](exercises/Task-1.md)
-2. [Variables](exercises/Task-2.md) 
-3. [Conditionals & Expressions](exercises/Task-3.md)
-4. [Data Structures](exercises/Task-4.md)
-5. [Loops](exercises/Task-5.md) 
-6. [Classes](exercises/Task-6.md)
-7. [Object Oriented Programming](exercises/Task-7.md)
-8. [Extras](exercises/Task-8.md)
-9. [Hello Robot](exercises/Task-9.md)
-10. [Motors & Encoders](exercises/Task-10.md)
-11. [Tank Drive](exercises/Task-11.md)
-12. [Command-Based Programming](exercises/Task-12.md)
+1. [Hello World](exercises/HelloWorld.md)
+2. [Variables](exercises/Variables.md) 
+3. [Conditionals & Expressions](exercises/Conditionals.md)
+4. [Data Structures](exercises/DataStructures.md)
+5. [Loops](exercises/Loops.md) 
+6. [Classes](exercises/Classes.md)
+7. [Object Oriented Programming](exercises/OOP.md)
+8. [Extras](exercises/Extras.md)
+9. [Hello Robot](exercises/HelloRobot.md)
+10. [Motors & Encoders](exercises/MotorsAndEncoders.md)
+11. [Tank Drive](exercises/TankDrive.md)
+12. [Command-Based Programming](exercises/CommandBased.md)
 
 **More Advanced Concepts**
 
-12. [401's 2023 Robot](exercises/Task-13.md) 
-13. [Odometry](exercises/Task-14.md) 
-14. [Simulation & Logging](exercises/Task-15.md)
-15. [Autonomous](exercises/Task-16.md)
-16. [PID Loops](exercises/Task-17.md)
-17. [Kinematics](exercises/Task-18.md)
-18. [Computer Vision](exercises/Task-19.md)
+13. [401's 2023 Robot](exercises/401-2023.md) 
+14. [Odometry](exercises/Odometry.md) 
+15. [Simulation & Logging](exercises/SimulationAndLogging.md)
+16. [Autonomous](exercises/Autonomous.md)
+17. [PID Loops](exercises/PIDLoops.md)
+18. [Kinematics](exercises/Kinematics.md)
+19. [Computer Vision](exercises/Vision.md)
 
 ---
 

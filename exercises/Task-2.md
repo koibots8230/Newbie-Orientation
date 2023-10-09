@@ -56,9 +56,10 @@ public final class Constants {
 8. Your output should look like this:
 
     3
+   
     0.5
 
-9. Add, commit and push your changes to your branch
+10. Add, commit and push your changes to your branch
    - If the file has already been git add-ed previously, you can instead use git commit -am "Message" to add and commit at the same time :wink:
 
 ## Instructor notes

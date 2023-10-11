@@ -14,7 +14,7 @@ Variables are essentially just a value that we assign to a name. We can change t
 ```java
 public final int number = 1;
 ```
-Let's break this down. We can break it into 6 parts
+Let's break this down. We can break it into 6 parts:
 1. public
     - This is a modifier that allows that variable to be seen and edited by other classes. The oppisite of this is *private*, which limits the variable to that class. If you fail to specify, the variable will instead be available to every class within its package (shown at the top of a file)
 2. final

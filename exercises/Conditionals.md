@@ -55,6 +55,7 @@ You can have as much or as little code as you want inside of a conditional. In t
 
 Normally, should your if statement evaluate to false, it will simply be skipped and the program will move on. But, if you have an *else* or *else if* statement, won't. *Else if* is essentially just another if statement, it is only run if all if or else if statements above it have evaluated to false. *Else* does the same thing, only without a boolean expression, so if the code reaches else, it will always be run. 
 Here's an example:
+
 ```java
 if (a == 1) {
     System.out.println("a = 1")
@@ -68,7 +69,7 @@ Breaking this down, the first thing that would be checked is if *a* = 1. If it d
 
 ### Ternary
 In Java if statements are not the only kind of conditional. Another prominent form is the ternary operator. The ternary operator, represented by the '?', is a form of an if-else statement that returns a value. The syntax works as follows:
-`(boolean expression) ? Value if true : Value if false`
+`(boolean expression) ? Value returned if true : Value returned if false`
 The ternary operator is helpful for compactly assigning a value based on certain conditions. Here's an modified example of how we used it in last year's code:
 ```java
 sign = (input < 0) ? -1 : 1

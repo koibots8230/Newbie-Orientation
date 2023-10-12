@@ -14,7 +14,7 @@ Variables are essentially just a value that we assign to a name. We can change t
 ```java
 public final int number = 1;
 ```
-Let's break this down. We can break it into 6 parts
+Let's break this down. We can break it into 6 parts:
 1. public
     - This is a modifier that allows that variable to be seen and edited by other classes. The oppisite of this is *private*, which limits the variable to that class. If you fail to specify, the variable will instead be available to every class within its package (shown at the top of a file)
 2. final
@@ -29,6 +29,7 @@ Let's break this down. We can break it into 6 parts
       |Double|Decimal number, can represent much longer numbers than float|`double`|
       |String|Text|`String`|
       |Boolean|True/False|`boolean`|
+*Note: Most of the time, we'll use doubles over floats*
   
 4. number
     - The name of the variable
@@ -60,10 +61,10 @@ public final class Constants {
     
 }
 ```
-5. Then add your own public double inside the class using the *final* keyword, name it DOUBLE_NUMBER, and give it the value of 0.5
+5. Then add your own double inside the class using the *final* and *public* keywords, name it DOUBLE_NUMBER, and give it the value of 0.5
 6. Back in Main.java, print out its value by referencing it as Constants.DOUBLE_NUMBER
    - Note: VS code *should* import Constants.java automatically, but if it doesn't, add `import com.koibots.Constants;` one line below the `import java.lang.System;`
-7. Run the program (If you don't remember)
+7. Run the program (If you don't remember, see ![Lesson 1](HelloWorld.md))
 8. Your output should look like this:
 
     3

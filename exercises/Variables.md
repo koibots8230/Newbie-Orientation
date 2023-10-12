@@ -37,6 +37,17 @@ Let's break this down. We can break it into 6 parts
 6. 1
     - The value that is assigned to the variable
 
+### Style
+
+To keep our code clean and consistent, we stick to some naming conventions
+
+|Object Type|Case|Example|
+|---|---|---|
+|Constants|Screaming Case|SCREAMING_CASE|
+|Methods/Functions|Lower Camel Case|lowerCamelCase|
+|Variables|Lower Camel Case|lowerCamelCase|
+|Classes|Upper Camel Case|UpperCamelCase|
+
 ## Instructions
 1. Create the variable *intNumber* of the type *int* and give it the value 3, then print it out
 2. Run the program (If you don't remember how, see [Exercise 1](Task-1.md))

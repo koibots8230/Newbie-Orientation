@@ -4,11 +4,11 @@
 
 Before we get started, first you need to have REV lib installed. REV lib is simply a library used to control things like spark maxes. To install it, either press the W icon in the top right of your VS code, or press F1 (you may have to use Fn + F1). Then, find manage vendor libraries in the search bar, hit install new libraries(online), and copy paste the following into the text box: `https://software-metadata.revrobotics.com/REVLib-2023.json`
 
-If you check the vendordeps folder, REVLib.json should be there!
+If you check the *vendordeps* folder, REVLib.json should be there!
 
 ## Motors
 
-Motors are the main thing that make the robot move. To put it simply, they rotate. To control the motors, we use what are called CAN spark maxes. A spark max is a kind of motor controller, which allows us to easilly make the motor move at variable speeds in either direction. To define an instance of a sparkmax, use the following:
+Motors are the main thing that make the robot move. To put it simply, they spin. To control the motors, we use what are called CAN spark maxes. A spark max is a kind of motor controller, which allows us to easily make the motor move at variable speeds in either direction. To define an instance of a spark max, use the following:
 ```java
 private CANSparkMax motor = new CANSparkMax(Constants.MOTOR_PORT, MotorType.kBrushless);
 ```
@@ -71,3 +71,4 @@ Some other helpful encoder methods are:
 6. Have it print out its position constantly in teleop
    -  Don't forget to reset the position on teleopInit
 7. Set the position conversion factor to 2
+8. Commit and push your changes

@@ -1,6 +1,5 @@
 # 1. Hello World
 
----
 ## Goals
 
  - Learn basic Java Syntax
@@ -31,8 +30,6 @@
     2. `git commit -m "Exersise 1"`
     3. `git push`
 8. Follow any instructions it may give you
-
-
 
 ## Addditional git commands (do your own research!)
 - `git checkout -b <branch_name>`

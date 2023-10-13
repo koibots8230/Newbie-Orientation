@@ -40,7 +40,7 @@ Let's break this down. We can break it into 6 parts:
 
 ### Style
 
-To keep our code clean and consistent, we stick to some naming conventions
+To keep our code clean and consistent, we stick to some naming conventions, and ask that you do as well.
 
 |Object Type|Case|Example|
 |---|---|---|
@@ -73,11 +73,3 @@ public final class Constants {
 
 10. Add, commit and push your changes to your branch
    - If the file has already been git add-ed previously, you can instead use git commit -am "Message" to add and commit at the same time :wink:
-
-## Instructor notes
-- Have them work with the style guide
-- Have them make a constants file
-- Different variable types
-  - double
-  - int
-  - lists

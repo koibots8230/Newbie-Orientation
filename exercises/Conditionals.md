@@ -18,7 +18,7 @@ The 'if' keyword is self-explanatory, so we can get right into the boolean expre
 
 You can use three different kinds of operators to make boolean expressions: Arithmetic Operators, Comparison Operators, and Logical Operators.
 
-Arithmetic operators are used for any arithmatic you would want to use, inside or outside of a boolean expression.
+Arithmetic operators are used for any arithmetic you would want to use, inside or outside of a boolean expression.
 |Arithmetic Operator|What it means|
 |---|---|
 |`+`|Addition|
@@ -84,16 +84,7 @@ What this does is allow us to square the variable *input* using Math.pow, but st
 4. Add an else if statement that checks if the remainder of intNumber divided by 2 is 1, and in the body, make it print a different message. Change the value of intNumber to 5.
 5. Run the program, your new message should print
 6. Add an else statement at the end, and have it print a different message from the other two
-7. Insead of setting the value of intNumber to 5, now set it to a number of your choosing
-8. Run your program. If the value of intNumber is 3, you should get your first print statement, if the value is odd and not 3, you should get your second, and if it is neither, you should get your third. Experiement with each of these to see how they all work.
+7. Instead of setting the value of intNumber to 5, now set it to a number of your choosing
+8. Run your program. If the value of intNumber is 3, you should get your first print statement, if the value is odd and not 3, you should get your second, and if it is neither, you should get your third. Experiment with each of these to see how they all work.
 9. Experiment with the logical operators and ternary however you see fit
 10. Commit and push your changes to your branch.
-
-## Instructor notes
-- Booleans
-- Ternary (`x ? a : b`)
-- Mathematical Operators * / + - < > % >= <= == !+
-- If/Else
-- and/or/not
-- Add some numbers together
-- May need to make this more on the reading side, bc there's not much "real" that can be done with conditions at this stage

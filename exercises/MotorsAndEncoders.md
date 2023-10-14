@@ -32,7 +32,7 @@ Motors have many, many other functions, but some of the most helpful ones are:
 
 ## Encoders
 
-Encoders are how we keep track of our motors. All our motors have build in encoders, or, when we need more accuracy, we can use external encoders. These two types of encoders are defined differently in code. When we want to use a built-in encoder, the syntax is
+Encoders are how we keep track of our motors. All our motors have build in encoders, or, when we need more accuracy, we can use external encoders. These two types of encoders are defined differently in code. When we want to use a built-in encoder, the syntax is:
 ```java
 private final RelativeEncoder encoder = motor.getEncoder();
 ```
@@ -45,7 +45,7 @@ As you can see, both of these create a RelativeEncoder, so once we define them, 
 ```java
 encoder.getPosition()
 ```
-This gives us the total amount of rotations the <u>encoder</u> has had **since it powered on**. But, shouldn't be power cycling the robot every time we want to test new code. So, in our teleopInit, we want to add something to reset the encoder positions. For this, we're going to use the following command:
+This gives us the total amount of rotations the <u>encoder</u> has had **since it powered on**. But, we shouldn't be power cycling the robot every time we want to test new code. So, in our teleopInit, we want to add something to reset the encoder positions. For this, we're going to use the following command:
 ```java 
 encoder.setPosition(0)
 ```

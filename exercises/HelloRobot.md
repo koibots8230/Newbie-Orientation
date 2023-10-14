@@ -2,7 +2,7 @@
 
 ## Before we get Started, a Warning
 
-Robotics is super fun, but we **have to be safe**. Unsafe programming can very quickly turn a fun robot into something that can **seriously injure** someone. When we tell you to do or not do something for the purpose of safety, **you are expected to follow those instructions**. Continued failure to follow safety rules **will result in disciplinary action**.
+Robotics is super fun, but we **have to be safe**. Unsafe programming can very quickly turn a fun robot into something that can **seriously injure** someone. When we tell you to do or not do something for the purpose of safety, **you are expected to follow those instructions**. Continued failure to follow safety rules **will result in immidiate disciplinary action**.
 
 ## Lesson/Instructions
 
@@ -10,7 +10,7 @@ Ok, now that you know the basics, we get to work with FRC code now :confetti_bal
 
 ### Creating a Robot Project
 
-Before we can use WPI lib, we have to make a project for that. First, press the W icon in the top left (or press Fn + F1). Find create a new project. In the GUI that pops up, select the *template* project type, *java* for the language, and *Timed Robot* for the base. Select this repo's folder, name your project yournameRobotCode, make sure the new folder checkbox is checked, and enter 8230 for the team number. Keep desktop support off, and generate the project. 
+Before we can use WPI lib, we have to make a project for that. First, press the W icon in the top right of VS code(or press Fn + F1). Find create a new project. In the GUI that pops up, select the *template* project type, *java* for the language, and *Timed Robot* for the base. Select this repo's folder, name your project yournameRobotCode, make sure the new folder checkbox is checked, and enter 8230 for the team number. Keep desktop support off, and generate the project. 
 
 
 ### What's Up in this New Folder?

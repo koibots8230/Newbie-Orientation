@@ -71,4 +71,5 @@ Some other helpful encoder methods are:
 6. Have it print out its position constantly in teleop
    -  Don't forget to reset the position on teleopInit
 7. Set the position conversion factor to 2
-8. Commit and push your changes
+8. Make sure the code builds
+9. Commit and push your changes

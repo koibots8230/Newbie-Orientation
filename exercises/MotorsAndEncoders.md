@@ -28,7 +28,7 @@ Motors have many, many other functions, but some of the most helpful ones are:
 |Inversion|Flips which way 1 and -1 will spin the motor|`motor.setInverted(true);`|
 |Idle Mode|Determines how the motor will act when idle. Can either be break or coast. Brake makes the motor resist being moved, coast just allows it to spin. Coast is default|`motor.setIdleMode(IdleMode.kBrake);`|
 
-[Here's](https://codedocs.revrobotics.com/java/com/revrobotics/cansparkmax) the full documentation.
+<a href="https://codedocs.revrobotics.com/java/com/revrobotics/cansparkmax" target="_blank">Here's</a> the full documentation.
 
 ## Encoders
 
@@ -59,7 +59,7 @@ Some other helpful encoder methods are:
 |`encoder.setPositionConversionFactor(factor)`|Allows you to set a number that then multiplies against the position number automatically when you call getPosition|
 |`encoder.setVelocityConversionFactor(factor)`|Same thing as above but for velocity|
 
-[Here's](https://codedocs.revrobotics.com/java/com/revrobotics/relativeencoder#method.detail) the full documentation.
+<a href="https://codedocs.revrobotics.com/java/com/revrobotics/relativeencoder#method.detail" target="_blank">Here's</a> the full documentation.
 
 ## Instructions
 

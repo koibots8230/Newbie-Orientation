@@ -16,7 +16,7 @@ public final int number = 1;
 ```
 Let's break this down. We can break it into 6 parts:
 1. public
-    - This is a modifier that allows that variable to be seen and edited by other classes. The oppisite of this is *private*, which limits the variable to that class. If you fail to specify, the variable will instead be available to every class within its package (shown at the top of a file)
+    - This is a modifier that allows that variable to be seen and edited by other classes. The opposite of this is *private*, which limits the variable to that class. If you fail to specify, the variable will instead be available to every class within its package (shown at the top of a file)
 2. final
     - This makes it so that the variable cannot be edited after this declaration. To not have this, simply don't include the *final* keyword
 3. int

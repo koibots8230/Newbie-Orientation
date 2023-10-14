@@ -36,4 +36,6 @@ Ok, with that out of the way, now onto all these methods. In Robot.java, you'll 
 |Test|This is when the robot is enabled in test mode, we use this for misc tasks|
 |Simulation|This is when the robot is simulating. We'll get to this later, ignore it for now|
 
+Double check to make sure your code works syntax-wise by hitting the W icon in the top right (or press Fn + F1) and selecting "Build Robot Code"
+
 Commit and push your changes(remember, you made new files, so you have to git add them!). 

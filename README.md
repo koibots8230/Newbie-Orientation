@@ -53,3 +53,5 @@ Intro goes here
  - [Controls Engineering for FRC](https://file.tavsys.net/control/controls-engineering-in-frc.pdf)
  - [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
  - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+ - [CodeAesthetic](https://www.youtube.com/@CodeAesthetic/videos)
+ - [State-Space Control](https://www.youtube.com/playlist?list=PLn8PRpmsu08podBgFw66-IavqU2SqPg_w)

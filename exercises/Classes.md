@@ -63,7 +63,7 @@ Ok, now onto the other main piece of a class: methods. If you know what a functi
 A method is a block of code generally meant to perform a certain task. The code is only run when the method is called. The method can take in arguments, and it can return a value, but it does not have to. Here's an example using our car class(this is still inside of the car class!):
 ```java
 public double driveForward(double speed) {
-    Code goes here
+    Block of code goes here
     return mph
 }
 ```
@@ -77,13 +77,14 @@ This calls the driveForward command for the ford F150, but <u>not</u> any other 
 
 ## Instructions
 
-1. In your Main class, create a new class of an of your choosing (school appropriate)
+1. Delete any previous code
+2. In your Main class, create a new class of an of your choosing (school appropriate)
    - Make sure the object can realistically have both attributes and a method
-2. Define your attributes
-3. Make the constructor, and set the attributes by passing them in as arguments
-4. Create a method relevant to your object with at least one argument, and create some form of program to represent the action that changes depending on the argument
-5. Make your method return something(if it doesn't really fit, this can be as simple as a confirmation message)
-6. Initialize your class in the main(String... args) method
-7. Call your method and print out what it returns
-8. Run your code
-9. Commit & Push your code
+3. Define your attributes
+4. Make the constructor, and set the attributes by passing them in as arguments
+5. Create a method relevant to your object with at least one argument, and create some form of program to represent the action that changes depending on the argument
+6. Make your method return something(if it doesn't really fit, this can be as simple as a confirmation message)
+7. Initialize your class in the main(String... args) method
+8. Call your method and print out what it returns
+9. Run your code
+10. Commit & Push your code

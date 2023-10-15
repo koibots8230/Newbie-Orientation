@@ -23,7 +23,7 @@ private void robotInit() {
     Trigger button = new Trigger(controller::x);
     
     button.onTrue(Commands.runOnce(
-            () -> notor.set(1)
+            () -> motor.set(1)
         ));
 }
 ```

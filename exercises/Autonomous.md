@@ -44,6 +44,8 @@ A good use of these is to put one of your commands with a wait command, which ju
 
 Parallel deadline groups are quite similar to race groups, but instead of ending when any command finishes, it ends when a specific command finishes, interrupting any still running commands.
 
+### Making a Command Group
+
 There are two ways to make a command group. You can make a subclass of one of them, or do it inline.
 
 For your overall autonomous group, you want to have it be a subclass. Here's how you do that:

@@ -2,7 +2,7 @@
 
 ## Lesson
 
-As you might remember from the introduction slideshow, a class is an object that holds other objects. In a class, you have two kinds of objects: methods and attributes. 
+As you might remember from the introduction slideshow, a class is an object that holds other objects. In a class, a class is made up of two things: methods and attributes. 
 
 Let's take the example of a car. A car can have certain attributes: brand, model, color. A car can also have certain methods or functions: drive forward, drive backward, brake, turn. 
 
@@ -43,7 +43,7 @@ For anyone wondering, the *this* keyword simply refers to the current object. Yo
 
 ### Initializing the Class
 
-Now that we have our constructor, let's initialize our class. Do do that, back in main(), we simply have to put:
+Now that we have our constructor, let's initialize our class. To do that back in main(), we simply have to put:
 ```java
 Car greyFordF150 = new Car("Ford", "F150", "Grey");
 ```
@@ -60,7 +60,7 @@ Car blueHondaAccord = new Car("Honda", "Accord", "Blue");
 
 Ok, now onto the other main piece of a class: methods. If you know what a function is, a method is similar, but it has some small differences.
 
-A method is a block of code generally meant to perform a certain task. The code is only run when the method is called. The method can take in arguments, and it can return a value, but it does not have to. Here's an example using our car class(this is still inside of the car class!):
+A method is a block of code generally meant to perform a specific task. The code is only run when the method is called. The method can take in arguments, and it can return a value, but it does not have to. Here's an example using our car class(this is still inside of the car class!):
 ```java
 public double driveForward(double speed) {
     Block of code goes here
@@ -78,12 +78,12 @@ This calls the driveForward command for the ford F150, but <u>not</u> any other 
 ## Instructions
 
 1. Delete any previous code
-2. In your Main class, create a new class of an of your choosing (school appropriate)
+2. In your Main class, create a new class representing an object of your choosing (school appropriate)
    - Make sure the object can realistically have both attributes and a method
 3. Define your attributes
 4. Make the constructor, and set the attributes by passing them in as arguments
 5. Create a method relevant to your object with at least one argument, and create some form of program to represent the action that changes depending on the argument
-6. Make your method return something(if it doesn't really fit, this can be as simple as a confirmation message)
+6. Make your method returns something(if it doesn't really fit, this can be as simple as a confirmation message)
 7. Initialize your class in the main(String... args) method
 8. Call your method and print out what it returns
 9. Run your code

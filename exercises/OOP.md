@@ -87,3 +87,7 @@ Even though the OOP version is a bit longer, it:
 - A: Is much cleaner and easier to work with
 - B: Is much more easily expandable to more car models
 - C: Does not repeat the same code needlessly
+
+## Instructions
+
+Make a new instance of your class from the last lesson & call the method

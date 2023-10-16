@@ -68,6 +68,7 @@ if (a == 1) {
 Breaking this down, the first thing that would be checked is if *a* = 1. If it does, print it, if not, we then check if *a* = 2. If it does, print it, if not, we print that it does not equal 1 or two.
 
 ### Ternary
+
 In Java if statements are not the only kind of conditional. Another prominent form is the ternary operator. The ternary operator, represented by the '?', is a form of an if-else statement that returns a value. The syntax works as follows:
 `(boolean expression) ? Value returned if true : Value returned if false`
 The ternary operator is helpful for compactly assigning a value based on certain conditions. Here's an modified example of how we used it in last year's code:

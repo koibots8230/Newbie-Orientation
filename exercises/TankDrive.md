@@ -25,6 +25,10 @@ controller.getLeftY();
 ```
 This will return the value of the y-axis, expressed as a percentage with 1 and -1 being 100% in either direction(just like our motors!)
 
+## Swerve
+
+Here, you've been taught how to do tank drive. But, this year, the team is planning on making a different kind of drivetrain called swerve drive. We aren't teaching you swerve yet because there isn't a swerve for you to test on at the moment. But, if you want to research and learn more about swerve, be our guest. You do not have to though, we will teach it when the time comes.
+
 ## Instructions  
  
 1. Create a working, controllable tank drive system
@@ -32,4 +36,4 @@ This will return the value of the y-axis, expressed as a percentage with 1 and -
   - *Note:* You already have all the knowledge you need to make this. If you need to, refer back to previous lessons. Try your best to do this on your own, but if you need help, you are more than welcome to ask.
 2. Commit and push your changes
 3. When you are done, go see Jake to get your code running on a robot
-<!--- Instructor note: This will run on jankbot ---!>
+<!--- Instructor note: This will run on cuttlefish, because jankbot doesn't have sparkmaxes --->

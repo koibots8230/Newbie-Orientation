@@ -1,11 +1,9 @@
 # Java Loops Overview
 
-Topics covered:
-1. How to write for loops in java
-2. How to write while loops in java
+## Lesson
 
-## While Loops
-A while loop is a loop that repeats as long as a certain condition is met. The following is an example of a while loop being used to count from 0 to 9:
+### While Loops
+A while loop is a loop that repeats *while* a boolean is true. The following is an example of a while loop being used to count from 0 to 9:
 ```java
 public class Main {
     public static void main(String[] args) {
@@ -19,7 +17,7 @@ public class Main {
 ```
 
 
-## For Loops
+### For Loops
 A for loop in java is a loop that repeats *for* a certain number of times. The following is an example of a for loop in java. It prints out the numbers 0-9:
 ```java
 public class Main {
@@ -68,7 +66,7 @@ public class Main {
 You can also run the code to test this theory.
 `while` loops are more useful when the number of iterations is uncertain and the condition is more complicated than the size of a variable. Otherwise, `for` loops are best because they are more concise.
 
-## for loops with lists
+### For Loops With Lists
 
 One of the most well-known and useful ways to use a for loop is to traverse a list with it and do something with all the elements. The following code example runs a for loop through a list of 10 numbers and prints out each of the numbers:
 
@@ -83,15 +81,22 @@ public class Main {
 }
 ```
 
-## Exercises
+## Instructions
 
+Delete conditionals code
+
+In your Main.java, have the following run in sequence:
 1. Use a while loop to print a countdown from 10 to 0 in the console.
 2. Use a for loop to traverse a **randomly generated** list of 10 numbers and print all them out.
-3. Use a while loop and a break statement to ask the user to input a number over and over until the user enters the number 8230.
+3. Use a while loop and a *break*(do research!) statement to ask the user to input a number over and over until the user enters the number 8230.
 4. Use a for loop to plant all the contents of a list of 10 numbers in random order.
-5. Use a for loop and a continue statement to only print the odd numbers out of a randomly generated list.
+5. Use a for loop and a *continue*(do research!) statement to only print the odd numbers out of a randomly generated list.
 
-## Resources
+Build your code (if you haven't already)
+
+Commit & Push your changes
+
+### Resources
 
 Click [here](https://www.geeksforgeeks.org/generating-random-numbers-in-java/) to go to a webpage explaining how to use random in java.
 Click [here](https://www.w3schools.com/java/java_user_input.asp) to go to a webpage explaining how to retrieve user input in java.

@@ -2,7 +2,7 @@
 
 ## Before we get Started, a Warning
 
-Robotics is super fun, but we **have to be safe**. Unsafe programming can very quickly turn a fun robot into something that can **seriously injure** someone. When we tell you to do or not do something for the purpose of safety, **you are expected to follow those instructions**. Continued failure to follow safety rules **will result in immidiate disciplinary action**.
+Robotics is super fun, but we **have to be safe**. Unsafe programming can very quickly turn a fun robot into something that can **seriously injure** someone. When we tell you to do or not do something for the purpose of safety, **you are expected to follow those instructions**. Continued failure to follow safety rules **will result in immediate disciplinary action**.
 
 ## Lesson/Instructions
 

@@ -20,7 +20,7 @@ Now onto curves. You won't be getting a perfectly straight path 100% of the time
 
 *Note:* Some tools exist to make this simpler and more efficient, and we are working on getting one to work, but for now, we're going to stick with this approach. 
 
-### How it Looks in Code
+### Command Groups
 
 Ok, so you have all your commands, and you know what you have to do. How do you do it in code? Let's talk about command groups. 
 

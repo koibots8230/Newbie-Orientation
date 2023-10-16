@@ -2,7 +2,7 @@
 
 ## Lesson
 
-As you might remember from the introduction slideshow, a class is an object that holds other objects. In a class, a class is made up of two things: methods and attributes. 
+As you might remember from the introduction slideshow, a class is an object that holds other objects. A class is made up of two things: methods and attributes. 
 
 Let's take the example of a car. A car can have certain attributes: brand, model, color. A car can also have certain methods or functions: drive forward, drive backward, brake, turn. 
 

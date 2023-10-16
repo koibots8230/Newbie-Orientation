@@ -94,4 +94,4 @@ public class Main {
 ## Resources
 
 Click [here](https://www.geeksforgeeks.org/generating-random-numbers-in-java/) to go to a webpage explaining how to use random in java.
-Click [here](https://www.w3schools.com/java/java_user_input.asp) to go to a webpage explaining how to retrieve user input in java
+Click [here](https://www.w3schools.com/java/java_user_input.asp) to go to a webpage explaining how to retrieve user input in java.

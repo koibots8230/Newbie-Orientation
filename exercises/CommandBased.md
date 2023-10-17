@@ -50,9 +50,29 @@ As you can see, on their base level, subsystems are pretty empty. Just a constru
 
 So the thing with subsystems is that they have to be accessed by other classes, namely commands. The easiest way that we've found to do this is simply to initialize the class within itself, then create a public method that just returns the instance.
 
+Here's an example:
+```java
+public class Subsystem extends SubsystemBase {
+
+    private static Subsystem subsystem = new Subsystem();
+
+    Subsystem() {
+
+    }
+
+    public static Subsystem get() {
+        return Subsystem
+    }
+}
+```
+
 **Methods**
 
 Speaking about methods, while you can do things without them, it is much easier and cleaner to setup methods for when you need to get a value or set something. For example, you'd make a set method for drivetrain that takes in a speed argument and sets all the drive motors to that speed.
+
+**Example**
+
+[Here's](https://github.com/koibots8230/Koibots-2023/blob/main/src/main/java/frc/robot/subsystems/IntakeSubsystem.java) an example of a subsystem from last year's bot
 
 ### Commands
 
@@ -104,6 +124,10 @@ Here's a list of the methods you see and what they each do
 
 When you are making a command, place **all subsystems** that it uses **in the addRequirements**. Otherwise, you may end up with the robot trying to go two different directions at the same time, which is not safe for the motors or, more importantly, you.
 
+**Example**
+
+[Here's](https://github.com/koibots8230/Koibots-2023/blob/main/src/main/java/frc/robot/commands/AutoBalance.java) an example of a command from last year's code.
+
 ### How are Commands Run?
 
 **Scheduling**
@@ -116,7 +140,7 @@ When you schedule a command, it performs a few steps:
 1. Checks that a command isn't in a composition
    - A composition is essentially a "has a" relationship between two classes. For example, a car <u>has a</u> engine. So the car class would have an instance of the engine class inside of it.
 2. Makes sure that:
-   - The scheduler isn't disabled(we'll ge to what the scheduler is in a minute)
+   - The scheduler isn't disabled(we'll ge5 to what the scheduler is in a minute)
    - The command isn't already scheduled
    - The robot is disabled & the command doesn't have an exemption to run while disabled (wooo safety!)
 3. If it's requirements are in use or not. If they are in use, it will attempt to interrupt the other command(s). If it can't the command will not be scheduled.
@@ -126,7 +150,7 @@ When you schedule a command, it performs a few steps:
 
 Default commands can be assigned to a subsystem & will be used when no other command is using the subsystem. It can be set using the following code:
 ```java
-Subsystem.setDefaultCommand(Command)
+Subsystem.setDefaultCommand(Command);
 ```
 
 ### The Command Scheduler

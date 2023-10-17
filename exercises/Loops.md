@@ -90,7 +90,7 @@ In your Main.java, have the following run in sequence:
 2. Use a for loop to traverse a **randomly generated** list of 10 numbers and print all them out.
 3. Use a while loop and a *break*(do research!) statement to ask the user to input a number over and over until the user enters the number 8230.
 4. Use a for loop to plant all the contents of a list of 10 numbers in random order.
-5. Use a for loop and a *continue*(do research!) statement to only print the odd numbers out of a randomly generated list.
+5. Use a for loop and a *continue*(do research!) statement to only print the odd numbers of a randomly generated list.
 
 Build your code (if you haven't already)
 

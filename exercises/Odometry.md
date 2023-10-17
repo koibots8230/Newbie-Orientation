@@ -15,6 +15,8 @@ Let's take the example of the charge station from last year's game. The charge s
 
 The thing is, since the charge station goes at an angle, when the robot travels 1m, it doesn't actually travel 1m forward on the field because the hypotenuse is longer than the base of a right triangle. 
 
+This leads to odometry being off by a large margin. As such, we didn't make use of odometry last year. 
+
 While this is a big problem, odometry can still be helpful for the autonomous phase, because you most likely will not encounter obstacles, as it's uncommon for obstacles to be present in the area where autonomous is. 
 
 ### In Code
@@ -35,7 +37,7 @@ There's 3 main things we need to break down here:
 
 **Rotation 2d**
 
-This is simply the yaw rotation that the gyroscope is currently reporting. If you need a refresher on which one pitch is, here's a diagram: 
+This is simply the yaw rotation that the gyroscope is currently reporting. If you need a refresher on what yaw is, here's a diagram: 
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHRw7O9wdp_pFfY-2tVcWOFlnW5wcUXgnAbq9C6QwGsosnqZU6t5eLlQukgFNDCLAQ32I:https://upload.wikimedia.org/wikipedia/commons/f/fa/6DOF_en.jpg&usqp=CAU" height="175">
 

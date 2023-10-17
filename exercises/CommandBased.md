@@ -56,7 +56,7 @@ Speaking about methods, while you can do things without them, it is much easier 
 
 ### Commands
 
-A command is made to do specific tasks. A command can use as many or as few subsystems as it would like. For example, you would have a command that sets drive motors to a joystick value.
+A command is made to do specific tasks. For example, you would have a command that sets drive motors to a joystick value. A command can use as many or as few subsystems as it would like. 
 
 When you create a command it will look like this:
 

@@ -6,7 +6,6 @@ Oftentimes, it's helpful to know where the robot is on the field. Odometry is on
 
 Ok, so let's say that the robot starts at (1, 2) and facing forward, in meters from the bottom right corner of the felid. The robot moves forward 1 meter. Odometry would count encoder rotations, do some simple math to turn that into distance, and update the position to (1, 3) and facing forward. 
 
-
 ### Inaccuracy
 
 The problem with odometry is that it looses accuracy fast. The minute the robot hits something, goes on uneven ground, is bumped by another robot, whatever. 
@@ -71,6 +70,10 @@ Pose2d odometryPose = odometry.update(
 );
 ```
 This should be in a periodic. This also is assuming you set the conversion factor to change the rotations into distance. 
+
+### Coordinate System
+
+For all of our purposes, we use a coordinate system based in meters with the origin at the bottom right corner of the field. The x direction goes to the left, and the y goes toward the top.
 
 ### Swerve
 

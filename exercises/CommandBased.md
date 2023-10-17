@@ -100,7 +100,7 @@ Here's a list of the methods you see and what they each do
 |`end(boolean interrupted)`| Runs when the command ends. `interrupted` specifies if the command was ended or canceled|
 |`addRequirements(Subsystem...)`|Records which subsystems are used by the command so that multiple commands won't use the same subsystem at the same time|
 
-**Safety Note**
+### **Safety Note**
 
 When you are making a command, place **all subsystems** that it uses **in the addRequirements**. Otherwise, you may end up with the robot trying to go two different directions at the same time, which is not safe for the motors or, more importantly, you.
 

@@ -4,7 +4,7 @@
 
 A drive train is what makes the robot move. It can come in many forms, but it will always use some form of wheels driven by motors. Tank drive(or west coast drive) is a type of drive train where two sides of non rotating wheels are controlled individually. 
 
-<img src ="https://docs.wpilib.org/en/stable/_images/am-14u4-6in-mecanum-upgrade.png" height ="200">
+<img src ="https://d2t1xqejof9utc.cloudfront.net/screenshots/pics/6478164315ddc20dbdc4f4c07864fc3a/large.png" height ="200">
 
 ### How to Control Tank Drive 
 

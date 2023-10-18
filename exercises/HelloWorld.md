@@ -12,7 +12,7 @@
         }
     }
     ```
-     - Notice how line 5 ends with a semicolon. Any statement (aka the stuff inside of these {} ) must end with a semicolon. Otherwise, you will get a syntax error and your code will not run.
+     - Notice how line 5 ends with a semicolon. Any statement (aka the stuff inside of these {}) must end with a semicolon. Otherwise, you will get a syntax error and your code will not run.
 2. Click the terminal button in the top, then hit "New Terminal"
 3. Save your file
 4. Run `./gradlew run` to see it print

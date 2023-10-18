@@ -1,10 +1,7 @@
 # Welcome to the Koibots!
 
----
+This is to teach you the basics on how to program in java, and more specifically, on the robot. You are required to do **all** of the lessons. You don't have to read the entire lesson if you already know it. You do however, have to do the exersise at the end. Don't forget to commit and push after each exersise, or we won't be able to see that you did it. If you have any questions, google it first(if applicable), then ask. We are happy to help. Good luck!
 
-Intro goes here
-
----
 ## Getting Started
 1. Ensure you've downloaded and installed [WPILib](https://github.com/wpilibsuite/allwpilib). If you haven't instructions are [here](https://koibots8230.github.io/koidocs/vscode.html).
 2. Make sure [Git](https://git-scm.com/downloads) is installed
@@ -13,7 +10,9 @@ Intro goes here
 3. Clone this git repository
 4. Create a branch with your name by running `git checkout -b YourName`
 5. Start completing the exercises
+
 ---
+
 ## Exercises
 
 **Beginners Guide to Java and FRC Programming**
@@ -39,6 +38,8 @@ Intro goes here
 17. [PID Loops](exercises/PIDLoops.md)
 18. [Kinematics](exercises/Kinematics.md)
 19. [Computer Vision](exercises/Vision.md)
+
+**[Glossary](glossary.md)**
 
 ---
 

@@ -155,7 +155,7 @@ Subsystem.setDefaultCommand(Command);
 
 ### The Command Scheduler
 
-Despite it's name, the command scheduler handles both subsystems and commands. The command scheduler runs every time that `CommandScheduler.getInstance().run()` is called. You should place that inside of robot periodic(this is one of the **only** things that should be in there). Whenever the command schedulers is run, it does 4 things, in order:
+The command scheduler is a singleton that handles both subsystems and commands. The command scheduler runs every time that `CommandScheduler.getInstance().run()` is called. You should place that inside of robot periodic(this is one of the **only** things that should be in there). Whenever the command schedulers is run, it does 4 things, in order:
 1. Runs subsystem periodic methods
 2. Checks to see if any commands bound to triggers need to be run & runs them
 3. Runs any scheduled commands `execute()` and `isFinished()`

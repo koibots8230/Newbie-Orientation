@@ -133,7 +133,9 @@ As an optional excersice arrays can also hold arrays as elements, try changing m
 ```java
 int[][] arrays = { array1, array2, array3, array4, array5 };
 ```
-this creates a array called array containing 5 arrays. The curly braces are another way of defining arrays, we don't need a number for the length because we have shown in the braces that there qill be 5 elements
+This creates a array called array containing 5 arrays. The curly braces are another way of defining arrays, we don't need a number for the length because we have shown in the braces that there will be 5 elements
+
+Commit & Push your changes
 
 ### Dynamic arrays
 
@@ -202,8 +204,6 @@ The last 2 methods, `keySet()` and `values()` become more important once we cove
 
 ### Excersice 
 
-[Here](https://www.thebluealliance.com/event/2024vabla) is a list of teams going to Blacksburg, what will be our first event next year. Create a hashmap that has at least 5 teams in it. Then create 2 functions, `GetNumber` and `AddTeam`. `GetNumber` will return the team number (for example 8230 or 401) by inputing the team name (Koibots or Copperhead Robotics).`AddTeam` will add a new team to the hashmap and use a team number and name as input.
+[Here](https://www.thebluealliance.com/event/2024vabla) is a list of teams going to Blacksburg, what will be our first event next year. Create a hashmap that has at least 5 teams in it. Then create 2 functions, `GetNumber` and `AddTeam`. `GetNumber` will return the team number (for example 8230 or 401) by inputting the team name (Koibots or Copperhead Robotics).`AddTeam` will add a new team to the hashmap and use a team number and name as input.
 
-
-
-
+Commit & Push your Changes

@@ -1,12 +1,14 @@
 # 10. Motors and Encoders
 
-## Installing REV LIb
+## Lesson
+
+### Installing REV LIb
 
 Before we get started, first you need to have REV lib installed. REV lib is simply a library used to control things like spark maxes. To install it, either press the W icon in the top right of your VS code, or press F1 (you may have to use Fn + F1). Then, find manage vendor libraries in the search bar, hit install new libraries(online), and copy paste the following into the text box: `https://software-metadata.revrobotics.com/REVLib-2023.json`
 
 If you check the *vendordeps* folder, REVLib.json should be there!
 
-## Motors
+### Motors
 
 Motors are the main thing that make the robot move. To put it simply, they spin. To control the motors, we use what are called CAN spark maxes. A spark max is a kind of motor controller, which allows us to easily make the motor move at variable speeds in either direction. To define an instance of a spark max, use the following:
 ```java
@@ -30,7 +32,7 @@ Motors have many, many other functions, but some of the most helpful ones are:
 
 <a href="https://codedocs.revrobotics.com/java/com/revrobotics/cansparkmax" target="_blank">Here's</a> the full documentation.
 
-## Encoders
+### Encoders
 
 Encoders are how we keep track of our motors. All our motors have build in encoders, or, when we need more accuracy, we can use external encoders. These two types of encoders are defined differently in code. When we want to use a built-in encoder, the syntax is:
 ```java

@@ -27,6 +27,7 @@ Seeing as we are ignoring Main.java, that leaves Robot.java. Robot.java generate
 5. If you want to, you can also delete all the comments(dark green text), but it isn't necessary
 
 Ok, with that out of the way, now onto all these methods. In Robot.java, you'll find a class with 12 methods. You'll notice that they are in pairs with an Init method, and a Periodic method. Init is short for initialize, and is executed when that mode is started. Periodic simply executes the code 50 times a second(aka at 50hz) while that mode is active. Here's a list on what each mode is.
+
 |Mode|What it is|
 |---|---|
 |Robot|This essentially starts from the minute the robot powers up and ends when you power the robot off **For safety reasons, never put code in robotPeriodic unless <u>explicitly</u> told otherwise, <u>and</u> especially never put any movement code in either of the two**|

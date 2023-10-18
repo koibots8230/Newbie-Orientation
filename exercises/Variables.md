@@ -1,13 +1,5 @@
 # 2. Variables
 
----
-## Goals
-
-- Learn basic Java Syntax
-- Learn how to assign variables
-- Learn the different variable types
-- Learn how to compile and run a program
-
 ## Lesson
 
 Variables are essentially just a value that we assign to a name. We can change the value that the name has, but it will still remain itself. Here's an example of a variable definition:

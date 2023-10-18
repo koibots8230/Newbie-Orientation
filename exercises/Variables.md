@@ -41,6 +41,8 @@ To keep our code clean and consistent, we stick to some naming conventions, and 
 |Variables|Lower Camel Case|lowerCamelCase|
 |Classes|Upper Camel Case|UpperCamelCase|
 
+When you are naming your variables, please, name them in a way that it tells you the purpose of it. We had better not see 1-letter variables. 
+
 ## Instructions
 1. Create the variable *intNumber* of the type *int* and give it the value 3, then print it out
 2. Run the program (If you don't remember how, see [Exercise 1](Task-1.md))

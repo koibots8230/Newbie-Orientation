@@ -1,12 +1,5 @@
 # 1. Hello World
 
-## Goals
-
- - Learn basic Java Syntax
- - Learn the basics of Git
- - Learn how to compile and run a program
- - Familiarity with your IDE
-
 ## Instructions 
 1. Currently ```src/main/java/com/koibots/Main.java``` looks like this:
 

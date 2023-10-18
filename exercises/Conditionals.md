@@ -45,6 +45,7 @@ Logical operators are used when you want to chain multiple boolean expressions t
 |*not*|Reverses the Boolean, if it was true, it's now false, and vice versa|`!a`|
 
 ### The Body
+
 The body of a conditional is what is actually run if your boolean expression evaluates to true. Going back to our above example, that would be 
 ```java
 System.out.println("1 + 1 = 2")

@@ -1,10 +1,7 @@
 # Welcome to the Koibots!
 
----
+This is to teach you the basics on how to program in java, and more specifically, on the robot. You are required to do **all** of the lessons. You don't have to read the entire lesson if you already know it. You do however, have to do the exersise at the end. Don't forget to commit and push after each exersise, or we won't be able to see that you did it. If you have any questions, google it first(if applicable), then ask. We are happy to help. Good luck!
 
-Intro goes here
-
----
 ## Getting Started
 1. Ensure you've downloaded and installed [WPILib](https://github.com/wpilibsuite/allwpilib). If you haven't instructions are [here](https://koibots8230.github.io/koidocs/vscode.html).
 2. Make sure [Git](https://git-scm.com/downloads) is installed
@@ -13,36 +10,42 @@ Intro goes here
 3. Clone this git repository
 4. Create a branch with your name by running `git checkout -b YourName`
 5. Start completing the exercises
+
 ---
+
 ## Exercises
 
 **Beginners Guide to Java and FRC Programming**
-1. [Hello World](exercises/Task-1.md)
-2. [Variables](exercises/Task-2.md) 
-3. [Conditionals & Expressions](exercises/Task-3.md) 
-4. [Loops](exercises/Task-4.md) 
-5. [Classes](exercises/Task-5.md) 
-6. [Object Oriented Programming](exercises/Task-6.md)
-7. [Extras](exercises/Task-7.md) 
-8. [Hello Robot](exercises/Task-8.md)
-9. [Motors & Encoders](exercises/Task-9.md)
-10. [Tank Drive](exercises/Task-10.md)
-11. [Command-Based Programming](exercises/Task-11.md)
+1. [Hello World](exercises/HelloWorld.md)
+2. [Variables](exercises/Variables.md) 
+3. [Conditionals & Expressions](exercises/Conditionals.md)
+4. [Data Structures](exercises/DataStructures.md)
+5. [Loops](exercises/Loops.md) 
+6. [Classes](exercises/Classes.md)
+7. [Object Oriented Programming](exercises/OOP.md)
+8. [Extras](exercises/Extras.md)
+9. [Hello Robot](exercises/HelloRobot.md)
+10. [Motors & Encoders](exercises/MotorsAndEncoders.md)
+11. [Tank Drive](exercises/TankDrive.md)
+12. [Command-Based Programming](exercises/CommandBased.md)
 
 **More Advanced Concepts**
 
-12. [401's 2023 Robot](exercises/Task-12.md) 
-13. [Odometry](exercises/Task-13.md) 
-14. [PID Loops](exercises/Task-14.md)
-15. [Autonomous](exercises/Task-15.md)
-16. [Computer Vision](exercises/Task-16.md)
-17. [Kinematics](exercises/Task-17.md)
-18. [Simulation & Logging](exercises/Task-18.md)
+13. [401's 2023 Robot](exercises/401-2023.md) 
+14. [Odometry](exercises/Odometry.md) 
+15. [Simulation & Logging](exercises/SimulationAndLogging.md)
+16. [Autonomous](exercises/Autonomous.md)
+17. [PID Loops](exercises/PIDLoops.md)
+18. [Kinematics](exercises/Kinematics.md)
+19. [Computer Vision](exercises/Vision.md)
+
+**[Glossary](glossary.md)**
 
 ---
 
 ## Useful Resources
 
+ - [Harvard's CS50](https://www.youtube.com/playlist?list=PLhQjrBD2T380F_inVRXMIHCqLaNUd7bN4)
  - [W3Schools Java](https://www.w3schools.com/java/default.asp)
  - [WPILib Docs](https://docs.wpilib.org/en/stable/index.html)
  - [REVLib Docs](https://docs.revrobotics.com/sparkmax/software-resources/spark-max-api-information)
@@ -51,3 +54,5 @@ Intro goes here
  - [Controls Engineering for FRC](https://file.tavsys.net/control/controls-engineering-in-frc.pdf)
  - [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
  - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
+ - [CodeAesthetic](https://www.youtube.com/@CodeAesthetic/videos)
+ - [State-Space Control](https://www.youtube.com/playlist?list=PLn8PRpmsu08podBgFw66-IavqU2SqPg_w)

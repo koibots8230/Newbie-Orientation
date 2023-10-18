@@ -187,7 +187,7 @@ FRC_Games.put(2023, "Charged Up");
 String lastYear = FRC_Games.get(2023);
 ```
 
-Like a dynamic array hashmaps can change in size and are eccesed like a class, here are a few useful methods for hashmaps:
+Like a dynamic array hashmaps can change in size and are accesed like a class, here are a few useful methods for hashmaps:
 
 |Name|Purpose|
 |---|---|

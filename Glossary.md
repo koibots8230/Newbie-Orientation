@@ -3,7 +3,7 @@
 ## Variables
 - **Variable**: Data assigned to a name
 - **Variable Type**: The type of data that is contained within a variable. Things like *double* or *int*.
-- **Style Guide**: A set of rules for how code should look. See [Variables](exersises/Variables.md) for ours.
+- **Style Guide**: A set of rules for how code should look. We use the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 
 ## Conditionals
 - **Conditional**: An expression that evaluates the truth of a boolean

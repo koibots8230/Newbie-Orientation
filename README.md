@@ -32,7 +32,7 @@ This is to teach you the basics on how to program in java, and more specifically
 
 ## Exercises
 
-**[Glossary](glossary.md)**
+**[Glossary](Glossary.md)**
 
 **Beginners Guide to Java and FRC Programming**
 1. [Hello World](exercises/HelloWorld.md)

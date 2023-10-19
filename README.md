@@ -2,6 +2,8 @@
 
 This is to teach you the basics on how to program in java, and more specifically, on the robot. You are required to do **all** of the lessons. You don't have to read the entire lesson if you already know it. You do however, have to do the exercise at the end. Don't forget to commit and push after each exercise, or we won't be able to see that you did it. If you have any questions, google it first(if applicable), then ask. We are happy to help. Good luck!
 
+*Note:* It is highly recommended to view the lessons on github. You can view them in VS code, but it won't look as nice and will be harder to navigate
+
 ## Getting Started
 1. Ensure you've downloaded and installed [WPILib](https://github.com/wpilibsuite/allwpilib). If you haven't instructions are [here](https://koibots8230.github.io/koidocs/vscode.html).
 2. Make sure [Git](https://git-scm.com/downloads) is installed
@@ -17,7 +19,7 @@ This is to teach you the basics on how to program in java, and more specifically
 5. Create a branch with your name by running `git checkout -b YourName`
 6. Start completing the exercises
 
-*Note:* If you cannot push, you might have to setup a key.
+*Note:* If you cannot push, you might have to setup a key:
    1. In terminal type ssh-keygen
    2. Type `cat .ssh/id_rsa.pub`
    3. Copy the text it outputs
@@ -35,6 +37,7 @@ This is to teach you the basics on how to program in java, and more specifically
 **[Glossary](Glossary.md)**
 
 **Beginners Guide to Java and FRC Programming**
+
 1. [Hello World](exercises/HelloWorld.md)
 2. [Variables](exercises/Variables.md) 
 3. [Conditionals & Expressions](exercises/Conditionals.md)

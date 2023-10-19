@@ -15,7 +15,8 @@
      - Notice how line 5 ends with a semicolon. Any statement (aka the stuff inside of these {}) must end with a semicolon. Otherwise, you will get a syntax error and your code will not run.
 2. Click the terminal button in the top, then hit "New Terminal"
 3. Save your file
-4. Run `./gradlew run` to see it print
+4. Run `./gradlew run` in terminal to see it print
+    - Note: If you get permission denied, run: `chmod 755 gradlew`
 5. Change the message to one of your choosing (school appropriate)
 6. Save the file
 7. In your terminal, run:

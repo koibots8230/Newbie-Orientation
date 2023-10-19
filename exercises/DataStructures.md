@@ -19,7 +19,7 @@ It should be noted that making good variable names is significantly preferred to
 
 ### What are Data Structures?
 
-A data structure is a way of organizing data within out program. You have already been introduced to variables like integers or strings, a data structure is just a format for arranging it. Say for example that we are writing code for the 2023 game and we want to model where game pieces have already been placed in a row on the grid. Just as a reminder the grid has 3 rows each with 9 spots for a game piece to be placed inside. If you were just trying to model one row how would you do it? Well here is one way:
+A data structure is a way of organizing data within a program. You have already been introduced to variables like integers or strings, a data structure is just a format for arranging it. Say for example that we are writing code for the 2023 game and we want to model where game pieces have already been placed in a row on the grid. Just as a reminder the grid has 3 rows each with 9 spots for a game piece to be placed inside. If you were just trying to model one row how would you do it? Well here is one way:
 
 ```java
 boolean p1 = false; //a true or false value, true means a game piece has been placed, false means it hasn't
@@ -60,9 +60,9 @@ For almost all robotics purposes the only data structures we will be using are A
 ### Array
 
 Lets start with an array. An array is simple to use but has some limitations: 
-- you cannot add values to it, when you create the array you are stuck with however many values are in it
-- every element in the array must be the same type of variable
-- you cannot remove values from the array
+- You cannot add values to it, when you create the array you are stuck with however many values are in it
+- Every element in the array must be the same type of variable
+- You cannot remove values from the array
 
 However, none of these effect our application! People aren't coming onto the field and taking away scoring locations in the middle of a match so the length of our array doesn't need to change. And all of the elements in the array store the same **type** of variable, a boolean. Note that I said type, the actual values held by the variables can be different (and we need them to be).
 

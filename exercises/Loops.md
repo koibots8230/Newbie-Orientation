@@ -28,7 +28,7 @@ public class Main {
     }
 }
 ```
-To declare a for loop, use the keyword `for` followed by 3 statements in parentheses seperated by semicolons. Then, the block of code to be executed repeatedly is placed between curly braces:
+To declare a for loop, use the keyword `for` followed by 3 statements in parentheses separated by semicolons. Then, the block of code to be executed repeatedly is placed between curly braces:
 ```java
 for (statement 1; statement 2; statement 3) {
     //code block to be executed goes here.

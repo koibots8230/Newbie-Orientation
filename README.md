@@ -1,6 +1,6 @@
 # Welcome to the Koibots!
 
-This is to teach you the basics on how to program in java, and more specifically, on the robot. You are required to do **all** of the lessons. You don't have to read the entire lesson if you already know it. You do however, have to do the exersise at the end. Don't forget to commit and push after each exersise, or we won't be able to see that you did it. If you have any questions, google it first(if applicable), then ask. We are happy to help. Good luck!
+This is to teach you the basics on how to program in java, and more specifically, on the robot. You are required to do **all** of the lessons. You don't have to read the entire lesson if you already know it. You do however, have to do the exercise at the end. Don't forget to commit and push after each exercise, or we won't be able to see that you did it. If you have any questions, google it first(if applicable), then ask. We are happy to help. Good luck!
 
 ## Getting Started
 1. Ensure you've downloaded and installed [WPILib](https://github.com/wpilibsuite/allwpilib). If you haven't instructions are [here](https://koibots8230.github.io/koidocs/vscode.html).

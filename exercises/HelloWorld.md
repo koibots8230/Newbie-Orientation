@@ -20,11 +20,11 @@
 6. Save the file
 7. In your terminal, run:
     1. `git add *`
-    2. `git commit -m "Exersise 1"`
+    2. `git commit -m "Exercise 1"`
     3. `git push`
 8. Follow any instructions it may give you
 
-## Addditional git commands (do your own research!)
+## Additional git commands (do your own research!)
 - `git checkout -b <branch_name>`
 - `git log -a`
 - `git branch -a`

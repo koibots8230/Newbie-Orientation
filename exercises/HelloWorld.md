@@ -1,4 +1,4 @@
-# 1. Hello World
+ 1. Hello World
 
 ## Instructions 
 1. Currently ```src/main/java/com/koibots/Main.java``` looks like this:

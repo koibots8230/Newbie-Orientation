@@ -1,9 +1,12 @@
 package com.koibots;
 
 import java.lang.System;
+import com.koibots.Constants;
 
 public final class Main {
     public static void main(String... args) {
-        System.out.println("Welcome to the Koibots! We have poor programing teachers, such as Jake!");
+        int intNumber = 3;
+        System.out.println(intNumber);
+        System.out.println(Constants.DOUBLE_NUMBER);
     }
 }

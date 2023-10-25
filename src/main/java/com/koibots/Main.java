@@ -1,13 +1,18 @@
 package com.koibots;
 
 import java.lang.System;
-import com.koibots.Constants;
+import com.koibots.Constants; 
 
 public final class Main {
     public static void main(String... args) {
-        int intNumber = 3;
+        int intNumber = 6;
 
-        System.out.println(intNumber);
-        System.out.println(Constants.DOUBLE_NUMBER);
+        if (intNumber == 3) {
+            System.out.println("intNumber is three!!");
+        } else if (intNumber % 2 == 1) {
+            System.out.println("the remainder of intNumber divided by two is ONE :O");
+        } else {
+            System.out.println("booo >:(");
+        }
     }
 }

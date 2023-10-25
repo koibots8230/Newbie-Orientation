@@ -1,26 +1,17 @@
 package com.koibots;
 
-import java.lang.System;
-import com.koibots.Constants;
+import java.util.HashMap;
+
 
 public final class Main {
     public static void main(String... args) {
-        int intNumber = 3;
+        HashMap<Integer, String> teams = new HashMap<Integer, String>();
+        teams.put(1, "Copperhead Robotics");
+        teams.put(2, "The Blair Robot Project");
+        teams.put(3, "Cometbots");
+        teams.put(4, "Blue Cheese");
+        teams.put(5, "the STAGS");
 
-        if (intNumber == 3) {
-            System.out.println(intNumber);
-        }
-
-        if (intNumber % 2 == 1) {
-            intNumber = 5;
-            System.out.println(intNumber);
-        } else {
-            System.out.println(intNumber);
-            System.out.println(intNumber);
-            intNumber = 1987; 
-
-        }
-
-
+        System.out.println(teams);
     }
 }

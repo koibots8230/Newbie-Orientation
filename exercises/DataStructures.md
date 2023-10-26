@@ -204,6 +204,6 @@ The last 2 methods, `keySet()` and `values()` become more important once we cove
 
 ### Exercise 
 
-[Here](https://www.thebluealliance.com/event/2024vabla) is a list of teams going to Blacksburg, what will be our first event next year. Create a hashmap that has at least 5 teams in it. Then create 2 functions, `GetNumber` and `AddTeam`. `GetNumber` will return the team number (for example 8230 or 401) by inputting the team name (Koibots or Copperhead Robotics).`AddTeam` will add a new team to the hashmap and use a team number and name as input.
+[Here](https://www.thebluealliance.com/event/2024vabla) is a list of teams going to Blacksburg, what will be our first event next year. Create a hashmap that has at least 5 teams in it. Print out all of the team names, then all of the team numbers.
 
 Commit & Push your Changes

@@ -1,8 +1,13 @@
 # 19. Computer Vision
 
+**Note:** This lesson is <u>optional</u>. You do not have to read this, it's a long read, but stuff discussed in here will appear in this year's code. 
+
 ## What's an Apriltag?
 
-<img src="https://docs.wpilib.org/en/stable/_images/orig_img.webp" height="250">
+<figure>
+<img src="https://docs.cbteeple.com/assets/img/apriltags_30mm.png" height="250">
+<!---If you are reading this raw, now is the time to switch over to github, as this contains a lot of images, which won't display for you--->
+</figure>
 
 Apriltags are what is called a visual fiducial system. A visual fiducial, or just a fiducial, is a standard sized object placed in an image to serve as a point of reference for measurement. This could be something as simple as a ruler. 
 
@@ -24,7 +29,9 @@ To accomplish this, we do a few things:
 
 From the camera, we get an image in the form of a frame. Let's use this image as an example:
 
+<figure>
 <img src="https://docs.wpilib.org/en/stable/_images/orig_img.webp" height="250">
+</figure>
 
 This image is made up of a whole bunch of pixels, each with its own color value. But, we don't need color, do we? An apriltag is black and white. So the first step we do is what is called adaptive thresholding.
 
@@ -47,7 +54,9 @@ The easiest way to do this is to simply find pixels that have a neighbor of the 
 
 A more complex approach can solve this issue. The connected color pixels are grouped using the [union find](https://www.youtube.com/watch?v=ibjEGG7ylHk) algorithm. For every pair of adjacent black and white groups, boundary pixels are found. This solves the problem by allowing 1 wide pixel groups to appear in multiple clusters. 
 
+<figure>
 <img src="https://docs.wpilib.org/en/stable/_images/segmentation.webp" height="250">
+</figure>
 
 ### Quad detection
 
@@ -90,13 +99,17 @@ Ok so now we have 4 pixel values that represent corners of an apriltag. But, we 
 
 Before we can estimate pose, we first have to get rid of camera distortion. Cameras are not going to perfectly capture an image. You will **never** find a perfect camera lens. Lenses mainly distort in what is called radial distortion. Radial distortion can occur three ways: barrel, pincushion, or a mixture of both. Here's what barrel and pincushion look like:
 
+<figure>
 <img src="https://clickitupanotch.com/wp-content/uploads/2014/06/lens-distortion-graphic.jpg" height="250">
+</figure>
 
 ### Intrinsic Parameters
 
 Ok, so how do we combat distortion? Well, we need what is called the intrinsic parameters of the camera we're using. Often, you'll find these represented in a matrix:
 
+<figure>
 <img src="resources/CameraMatrix.png" height="100">
+</figure>
 
 In this matrix, you get 4 parameters: *f*<sub>x</sub>, *f*<sub>y</sub>, *c*<sub>x</sub>, and *c*<sub>y</sub>.
 
@@ -104,7 +117,9 @@ In this matrix, you get 4 parameters: *f*<sub>x</sub>, *f*<sub>y</sub>, *c*<sub>
 
 Let's start with the *f*s. The *f*s represent the focal length of the camera. Focal length is the distance between the camera's "nodal point", or where the light converges, and the optical sensor. Here's a diagram that shows it better:
 
+<figure>
 <img src="https://photographylife.com/wp-content/uploads/2019/04/what-is-focal-length-in-photography-diagram.jpg" height="200">
+</figure>
 
 The shorter the focal length is, the more "wide" a shot will be, but it will also be more distorted. The more the focal length, the more "zoomed in" the shot will be, but the less distorted it will be. Here's a picture taken from the same point at multiple different focal lengths:
 
@@ -200,4 +215,4 @@ This isn't to say vision isn't helpful, we simply just have to realize that we h
 
 ## A Quick Note
 
-This only really skims the surface of vision. In complete honesty, vision is a task that, unless one of you freshmen is really interested, won't fall onto your lap. This was mainly to teach you enough so that you understand vision at a base level, and be able to work with it easier. 
+This only really skims the surface of vision. In complete honesty, vision is a task that, unless one of you freshmen is really interested, won't fall onto your lap. This was mainly to teach you enough so that you understand vision at a base level, and be able to work with it easier.

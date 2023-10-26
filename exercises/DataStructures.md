@@ -204,6 +204,6 @@ The last 2 methods, `keySet()` and `values()` become more important once we cove
 
 ### Exercise 
 
-[Here](https://www.thebluealliance.com/event/2024vabla) is a list of teams going to Blacksburg, what will be our first event next year. Create a hashmap that has at least 5 teams in it. Print out all of the team names, then all of the team numbers.
+[Here](https://www.thebluealliance.com/event/2024vabla) is a list of teams going to Blacksburg, what will be our first event next year. Create a hashmap that has at least 5 teams in it. Print out all of the team names, then all of the team numbers. (i.e. Koibots, Copperhead Robotics, Newton Squared, then 8230, 401, 8592)
 
 Commit & Push your Changes

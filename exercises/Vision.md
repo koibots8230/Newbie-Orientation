@@ -42,7 +42,7 @@ Thresholding is the process of taking an image, and turning it into either black
 Adaptive thresholding is a bit more complicated. Adaptive thresholding takes the mean pixel intensity in the area around the pixel, and uses that as the threshold to classify the pixel. Alternatively, some solutions group pixels into groups, and set the threshold for every pixel in the group, instead of having each pixel get it's own value. This can save tremendously on computer resources, but it may have an adverse impact on accuracy.
 
 <figure>
-<img src="https://docs.wpilib.org/en/stable/_images/adaptive_threshold.webp" height="250">
+<img src="resources/thresholding.png" height="250">
 <figcaption>The grey pixels are ignored by the computer.</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ The easiest way to do this is to simply find pixels that have a neighbor of the 
 A more complex approach can solve this issue. The connected color pixels are grouped using the [union find](https://www.youtube.com/watch?v=ibjEGG7ylHk) algorithm. For every pair of adjacent black and white groups, boundary pixels are found. This solves the problem by allowing 1 wide pixel groups to appear in multiple clusters. 
 
 <figure>
-<img src="https://docs.wpilib.org/en/stable/_images/segmentation.webp" height="250">
+<img src="resources/segmentation.png" height="250">
 </figure>
 
 ### Quad detection
@@ -67,7 +67,7 @@ The math behind this is very complicated, and I only have a loose understanding 
 As a result, we get all the relevant quads from the image. We do get some background quads as well, but we'll filter those out in the next step.
 
 <figure>
-<img src="https://docs.wpilib.org/en/stable/_images/detected_quads.webp" height="250">
+<img src="resources/quadDetect.png" height="250">
 <figcaption>Note: the computer still looks at the thresholded version, this is just overlaid against the greyscale to make it easier to see</figcaption>
 </figure>
 
@@ -78,7 +78,7 @@ Ok, so now we have our quads, including all the ones relevant to the apriltag. N
 The computer already has the spots where it changes colors. It also has the outer boundary of the tag. All it has to do is determine the size of each "bit" in pixels, then read it. Accounting for one or two bit errors, it then compares what it reads to a database of all the tags in that family, and gets the ID of the tag.
 
 <figure>
-<img src = https://docs.wpilib.org/en/stable/_images/decode_id.webp height="250">
+<img src = "resources/idDecode.png" height="250">
 <figcaption>Note: the computer still looks at the thresholded version, this is just overlaid against the greyscale to make it easier to see</figcaption>
 </figure>
 

@@ -152,3 +152,7 @@ Abstract classes allow you to define default definitions for methods that can be
 ## Instructions
 
 There aren't any for this one, but this stuff will be talked about later, so make sure you understand it.
+
+Have main.java just print out a message saying something along the lines of "done with extras"
+
+Commit & Push

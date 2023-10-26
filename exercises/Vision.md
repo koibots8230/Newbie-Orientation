@@ -1,12 +1,12 @@
 # 19. Computer Vision
 
-**Note:** This lesson is <u>optional</u>. You do not have to read this, it's a long read, but stuff discussed in here will appear in this year's code. 
+**Note:** This lesson is <u>optional</u>. You do not have to read this, it's a long read, but stuff discussed in here will appear in this year's code.
 
 ## What's an Apriltag?
 
 <figure>
 <img src="https://docs.cbteeple.com/assets/img/apriltags_30mm.png" height="250">
-<!---If you are reading this raw, now is the time to switch over to github, as this contains a lot of images, which won't display for you--->
+<!---If you are reading this raw, now is the time to switch over to github, as this contains a lot of images which won't display for you--->
 </figure>
 
 Apriltags are what is called a visual fiducial system. A visual fiducial, or just a fiducial, is a standard sized object placed in an image to serve as a point of reference for measurement. This could be something as simple as a ruler. 
@@ -215,4 +215,6 @@ This isn't to say vision isn't helpful, we simply just have to realize that we h
 
 ## A Quick Note
 
-This only really skims the surface of vision. In complete honesty, vision is a task that, unless one of you freshmen is really interested, won't fall onto your lap. This was mainly to teach you enough so that you understand vision at a base level, and be able to work with it easier.
+In complete honesty, vision is a task that, unless one of you freshmen is really interested, won't fall onto your lap. This was mainly to teach you enough so that you understand vision at a base level, and be able to work with it easier. 
+
+If there is a freshman that is particularly interested, come talk to Jake.

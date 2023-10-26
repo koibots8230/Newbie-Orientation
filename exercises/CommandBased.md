@@ -72,7 +72,7 @@ Speaking about methods, while you can do things without them, it is much easier 
 
 **Example**
 
-[Here's](https://github.com/koibots8230/Koibots-2023/blob/main/src/main/java/frc/robot/subsystems/IntakeSubsystem.java) an example of a subsystem from last year's bot
+[Here's](https://github.com/koibots8230/Koibots-2023/blob/main/src/main/java/frc/robot/subsystems/IntakeSubsystem.java) an example of a subsystem from last year's bot.
 
 ### Commands
 

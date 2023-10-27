@@ -30,7 +30,7 @@ To accomplish this, we do a few things:
 From the camera, we get an image in the form of a frame. Let's use this image as an example:
 
 <figure>
-<img src="https://docs.wpilib.org/en/stable/_images/orig_img.webp" height="250">
+<img src="resources/originalApriltag.png" height="250">
 </figure>
 
 This image is made up of a whole bunch of pixels, each with its own color value. But, we don't need color, do we? An apriltag is black and white. So the first step we do is what is called adaptive thresholding.

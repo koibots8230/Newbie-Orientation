@@ -215,6 +215,6 @@ This isn't to say vision isn't helpful, we simply just have to realize that we h
 
 ## A Quick Note
 
-In complete honesty, vision is a task that, unless one of you freshmen is really interested, won't fall onto your lap. This was mainly to teach you enough so that you understand vision at a base level, and be able to work with it easier. 
+In complete honesty, vision a work in progress, so unless one of you freshmen is super interested, this isn't going to be a task that will fall into your lap (at least for this year). 
 
 If there is a freshman that is particularly interested, come talk to Jake.

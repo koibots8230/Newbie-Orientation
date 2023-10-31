@@ -170,7 +170,7 @@ A hashmap is like a vector but instead of using an index it uses a 'key'. Every 
 basically instead of accessing your value with a number you access it with a variable of your choice. For example if you want to know what the FRC game was for a particular year you can use a hashmap, instead of using a regular index that starts at 0 you can use whatever kind of index you want! Since we are using year we can still input an integer but we don't need to start at zero
 
 ```java
-HashMap<int, String> FRC_Games = new HashMap<int, String>();
+HashMap<Integer, String> FRC_Games = new HashMap<Integer, String>();
 
 FRC_Games.put(2011, "Logo Motion");
 FRC_Games.put(2012, "Rebound Rumble");

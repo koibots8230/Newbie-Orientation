@@ -1,6 +1,8 @@
 # 8. Extras
 
-## Recursion
+## Lesson
+
+### Recursion
 
 Recursion is an alternative to iteration where a function calls itself until a condition has been met. For example, 
 ```java
@@ -42,7 +44,7 @@ class Main {
 ```
 Both of these solutions do the same thing and look the same from the perspective of the main function. Recursion is useful in some cases for readability and in some rarer cases performance.
 
-## Enums
+### Enums
 
 Enums are special classes that allow you to store arbitrary constants. Enums are not instantiated by the user, they reference constants that can be accesses with `enum.Value`.
 ```java
@@ -79,9 +81,9 @@ public enum Elements {
 }
 ```
 
-## Lambdas
+### Lambdas
 
-Java allows you to reference a function with lambda expressions. THis is useful when you need to pass a function as a parameter. Generally lambda functions look like:
+Java allows you to reference a function with lambda expressions. This is useful when you need to pass a function as a parameter. Generally lambda functions look like:
 ```java
 // Without parameters
 () -> motor.set(0)
@@ -95,7 +97,7 @@ They can also be defined inline
 motor::set
 ```
 
-## Singletons
+### Singletons
 
 A class is a singleton when only one instance of a class should exist. Usually this looks like:
 ```java
@@ -123,7 +125,7 @@ class Singleton {
 }
 ```
 
-## Interfaces & Abstract Classes
+### Interfaces & Abstract Classes
 
 Interfaces and abstract classes allow you to template a class. This allows other classes to use any class that implements or extends the interface or abstract class.
 
@@ -146,3 +148,11 @@ public abstract class ExampleAbstractClass {
 ```
 
 Abstract classes allow you to define default definitions for methods that can be overloaded while still preventing the class from being instantiated.
+
+## Instructions
+
+There aren't any for this one, but this stuff will be talked about later, so make sure you understand it.
+
+Have main.java just print out a message saying something along the lines of "done with extras"
+
+Commit & Push

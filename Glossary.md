@@ -3,7 +3,7 @@
 ## Variables
 - **Variable**: Data assigned to a name
 - **Variable Type**: The type of data that is contained within a variable. Things like *double* or *int*.
-- **Style Guide**: A set of rules for how code should look. See [Variables](exersises/Variables.md) for ours.
+- **Style Guide**: A set of rules for how code should look. We use the [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
 
 ## Conditionals
 - **Conditional**: An expression that evaluates the truth of a boolean
@@ -15,7 +15,17 @@
 - **Ternary**: An operator used to condense conditionals
 
 ## Data Structures
-- **Insert Data Structures Terms Here**
+- **Comment**: Text in code that isn't read by the computer. Shown with a '//' before it
+- **Data Structure**: A format for the storage and organization of data
+- **Array**: A list of a fixed size, cheaper for the computer
+- **Dynamic Array**: Similar to an array, but it can change size, and is accessed via a class
+- **Hashmap**: A list of key value pairs, similar to python's dictionaries
+- **Linked List**: Pretty much the same a dynamic array, but is more efficient for the computer
+- **Stack**: A last in first out where the data is accessed like a stack of papers
+- **Queue**: A first in first out where data is accessed from a different end than where it's inputted, like a queue at an airport
+- **Binary Tree**: A series of nodes where each node makes a reference to it's "children" nodes and to it's "parent" nodes
+- **Heap**: A type of overcomplicated binary tree that deals with applications involving priority
+- **Graph**: A data structure where data is virtually represented as having "edges" and "vertices"
 
 ## Loops
 - **While Loop**: A loop that runs while a boolean is true
@@ -33,7 +43,11 @@
 - **Object**: An instance of a class
 
 ## Extras
-- **Insert Extras Terms Here**
+- **Recursion**: An alternative to iteration(loops) where a function calls itself until a condition has been met
+- **Enum**: Special classes that allow for arbitrary constants
+- **Singleton**: A class where only 1 instance exists
+- **Interface**: An empty "blueprint" for making a class
+- **Abstract class**: Similar to an interface, but you can put default code that can be overridden
 
 ## Hello Robot
 - **WPILib**: The library we(and almost every team) use to control the robot
@@ -76,4 +90,6 @@
 ## Command Based
 - **Command-Based Programming**: Command based programming is a declarative programming methodology that uses commands to affect how a subsystem behaves
 - **Subsystem**: A digital reflection of a physical subsystem on the robot (i.e. drivetrain, intake, shooter, etc.)
-- **Command**: A set of instructions 
+- **Command**: A set of instructions meant to accomplish a set task. Often uses subsystems to accomplish this
+- **Default Command**: A command bound to a subsystem that runs when no other command is using the subsystem
+- **Command Scheduler**: A singleton that handles the processing of subsystems and commands 

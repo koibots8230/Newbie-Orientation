@@ -28,7 +28,7 @@ public class Main {
     }
 }
 ```
-To declare a for loop, use the keyword `for` followed by 3 statements in parentheses seperated by semicolons. Then, the block of code to be executed repeatedly is placed between curly braces:
+To declare a for loop, use the keyword `for` followed by 3 statements in parentheses separated by semicolons. Then, the block of code to be executed repeatedly is placed between curly braces:
 ```java
 for (statement 1; statement 2; statement 3) {
     //code block to be executed goes here.
@@ -92,7 +92,7 @@ In your Main.java, have the following run in sequence:
 4. Use a for loop to plant all the contents of a list of 10 numbers in random order.
 5. Use a for loop and a *continue*(do research!) statement to only print the odd numbers of a randomly generated list.
 
-Build your code (if you haven't already)
+Run your code (if you haven't already)
 
 Commit & Push your changes
 

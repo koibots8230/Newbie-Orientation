@@ -10,7 +10,7 @@ Ok, now that you know the basics, we get to work with FRC code now :confetti_bal
 
 ### Creating a Robot Project
 
-Before we can use WPI lib, we have to make a project for that. First, press the W icon in the top right of VS code(or press Fn + F1). Find create a new project. In the GUI that pops up, select the *template* project type, *java* for the language, and *Timed Robot* for the base. Select this repo's folder, name your project yournameRobotCode, make sure the new folder checkbox is checked, and enter 8230 for the team number. Keep desktop support off, and generate the project. 
+Before we can use WPI lib, we have to make a project for that. First, press the W icon in the top right of VS code(or press Fn + F1). Find create a new project. In the GUI that pops up, select the *template* project type, *java* for the language, and *Timed Robot* for the base. Select this repo's folder, name your project *yournameRobotCode*, make sure the new folder checkbox is checked, and enter 8230 for the team number. Keep desktop support off, and generate the project. 
 
 
 ### What's Up in this New Folder?
@@ -30,7 +30,7 @@ Ok, with that out of the way, now onto all these methods. In Robot.java, you'll 
 
 |Mode|What it is|
 |---|---|
-|Robot|This essentially starts from the minute the robot powers up and ends when you power the robot off **For safety reasons, never put code in robotPeriodic unless <u>explicitly</u> told otherwise, <u>and</u> especially never put any movement code in either of the two**|
+|Robot|This essentially starts from the second the robot powers up and ends when you power the robot off **For safety reasons, never put code in robotPeriodic unless <u>explicitly</u> told otherwise, <u>and</u> especially never put any movement code in either of the two**|
 |Disabled|This is when the robot is disabled. **For safety reasons, no code that makes the robot move should <u>ever</u> be placed in here**|
 |Autonomous|This is when the robot is enabled in Autonomous mode. Autonomous is the 15 seconds at the start of a match where it's only code, no drivers. **For safety reasons, be very far away from the robot when testing this**|
 |Teleop|This is when the robot is enabled and being controlled by drivers|

@@ -14,13 +14,19 @@ Motors are the main thing that make the robot move. To put it simply, they spin.
 ```java
 private CANSparkMax motor = new CANSparkMax(Constants.MOTOR_PORT, MotorType.kBrushless);
 ```
-The only thing that really needs to be covered here is the motor port. Every spark max has a number, which we use to differentiate between them in code.
+There's two things here that are new to you: motor port and motor type. 
 
-Now that you have a motor defined, time to use it. There are many ways to make a motor move, but the main one we use is:
+Every spark max has a number, which we use to differentiate between them in code. This is the motor port.
+
+The motor type simply describes if a motor is [brushed or brushless](https://www.powerelectric.com/motor-resources/motors101/what-is-the-difference-between-a-brushless-and-a-brushed-motor). For us, this will only ever be brushless.
+
+Now that you have a motor defined, time to use it. There are many ways to control a motor, but the one we're going to use for now is:
 ```java
 motor.set(1);
 ```
-In this case, I am setting the motor to go 100% in the positive direction. Setting uses a percentage-based system with 1 and -1 being the 100% in either direction, and the in-between being decimals. 
+In this case, I am setting the motor to go at 100% in the positive direction. `motor.set()` uses a percentage-based system with 1 and -1 being the 100% in either direction, and the in-between being decimals. 
+
+There are some other ways to control a motor, such as velocity or voltage control, but `motor.set()` is simpler to understand & tune, so we're just going to use this for now.
 
 Motors have many, many other functions, but some of the most helpful ones are:
 
@@ -45,13 +51,13 @@ private final RelativeEncoder encoder = motor.getAlternateEncoder(Constants.COUN
 
 As you can see, both of these create a RelativeEncoder, so once we define them, there is virtually no difference in code. The main thing you are going to be doing with encoders is getting their position. In code, this looks like this:
 ```java
-encoder.getPosition()
+encoder.getPosition();
 ```
 This gives us the total amount of rotations the <u>encoder</u> has had **since it powered on**. But, we shouldn't be power cycling the robot every time we want to test new code. So, in our teleopInit, we want to add something to reset the encoder positions. For this, we're going to use the following command:
 ```java 
-encoder.setPosition(0)
+encoder.setPosition(0);
 ```
-As you might have guessed, this simply sets the encoder position to 0. When you add this to your code, make sure to do it for all your encoders, or your measurements will be all messed up. 
+As you might have guessed, this simply sets the encoder position to 0. When you add this to your code, make sure to do it for **all your encoders**, or your measurements will be all messed up. 
 
 Some other helpful encoder methods are:
 

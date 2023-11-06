@@ -32,9 +32,9 @@ In code, subsystems are mean to be kind of digital versions of actual subsystems
 
 Here's what an empty subsystem looks like:
 ```java
-public class Subsystem extends SubsystemBase {
+public class ExampleSubsystem extends SubsystemBase {
 
-    public Subsystem() {
+    public ExampleSubsystem() {
 
     }
 

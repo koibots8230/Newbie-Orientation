@@ -1,5 +1,11 @@
 # 4. Data Structures
 
+If you have any issues related to your code not seeing the neccesary libraries, for example Hasmaps, try putting this line at the top of your code:
+```java
+import java.util.*; 
+```
+If this still doesn't work use a online IDE like [this one](https://www.w3schools.com/java/tryjava.asp?filename=demo_compiler), but still add that line at the top. Also don't worry if it takes a while to run, that's normal
+
 ## Lesson
 
 ### First, comments
@@ -55,7 +61,7 @@ There are a few different data structures available in Java:
 |Heap| A type of overcomplicated binary tree that deals with applications involving priority|
 |Graph| A data structure where data is virtually represented as having "edges" and "vertices"|
 
-For almost all robotics purposes the only data structures we will be using are Arrays, Linked lists and Hashmaps
+For almost all robotics purposes the only data structures we will be using are Arrays and Hashmaps
 
 ### Array
 
@@ -94,32 +100,9 @@ class ArrayDemo {
 		boolean[] MidNodes = new boolean[9];
 		boolean[] HighNodes = new boolean[9];
 
-		void changeNode(int level, boolean value, int number){
-			//level represents Low, Mid or High as 1,2 or 3
-			//value represents if we are changing it to true or false
-			//number represents the number of the scoring location within the row, between 1 and 9
-			if (level == 1){
-				LowNodes[level - 1] = value; //subtract 1 because we want the input to be between 1 and 9 but indexes start at 0
-			}
-			if (level == 2){
-				MidNodes[level - 1] = value;
-			}
-			if (level == 3){
-				HighNodes[level - 1] = value;
-			}
-		}
-
-		boolean GetNodeValue(int level, int number){
-			if (level == 1){
-				return LowNodes[level - 1];
-			}
-			if (level == 2){
-				return MidNodes[level - 1];
-			}
-			if (level == 3){
-				return HighNodes[level - 1];
-			}
-		}
+		HighNodes[0] = true; // changes value of the first node on the high row to true, remember, indexes start at 0 not 1
+		MidNodes[8] = true; // changes value of the last Mid node to true
+		System.out.println(HighNodes[0]); // gets the value of the first high node and prints it, should print "true"
 	    
 	}
 }
@@ -127,41 +110,17 @@ class ArrayDemo {
 
 ### Array Exercise
 
-In the 2017 game there were 4 "hoppers", two on the red side and two on the blue side. These were large ball dispensing machines. They held literally dozens of balls at the start of the match and when a team hit a lever they would all be released onto the field. Model the behavior of these hoppers with arrays, make a `ChangeHopperValue` function and a `GetHopperValue` function. In the game when a hopper was triggered it was triggered for the whole match, the balls were not going back in. How can you use this to simplify the `ChangeHopperValue` function?
+In the 2019 game there were 4 "rocket ships", The rocket ship had 3 columns, each of the columns had 3 scoring locations. Model 1 rocket ship with 3 arrays:
+* Two of the columns contained locations to place "hatches", create 2 arrays called `HatchColumnClose` and `HatchColumnFar` which should each store 3 boolean values for where hatches have and haven't been placed
+* In the middle there was a column where you placed large balls in one of three scoring locations. Create a `BallColumn` array of 3 **integers**, integers because instead of saying wether or not a ball was placed it will store how many balls were placed. In your excersice change it so that `HatchColumnClose` and `HatchColumnFar` have both had their bottom scoring location scored on and there are 2 balls in the top scoring location of `BallColumn`, then print out each of their values to make sure it worked. It doesn't matter but it is preffered if you model the bottom as `[0]`.
 
-As an optional exercise arrays can also hold arrays as elements, try changing my code for the grid to only contain 1 array. A "multi-dimensional array" as they are called can be defined like this:
+As an optional exercise arrays can also hold arrays as elements, try changing my code for the 2023 grid to only contain 1 array. A "multi-dimensional array" as they are called can be defined like this:
 ```java
 int[][] arrays = { array1, array2, array3, array4, array5 };
 ```
 This creates a array called array containing 5 arrays. The curly braces are another way of defining arrays, we don't need a number for the length because we have shown in the braces that there will be 5 elements
 
 Commit & Push your changes
-
-### Dynamic arrays
-
-A Dynamic array is very similar to a Array with a couple key differences
-
-- The list can change in size
-- used as a class
-
-Vector classes are a type of linked list and have a unusual definition
-
-```java
-Vector<Integer> myvector = new Vector<Integer>(20); //creates a vector of 20 integers
-myvector.add(15); //adds a additional value of 15 to the end of the vector
-myvector.get(20); //gets the value we just added (indexes start at 0)
-```
-The syntax is a little scary, don't worry you don't have to understand the purpose of the <> symbols just understand that whatever is inside is the type of variable used. `add()` and `get()`are methods that are called on the vector. Think of them like functions that only work for vectors. In fact there are dozens of methods that you can use on vectors, you can see them all [here](https://www.geeksforgeeks.org/java-util-vector-class-java/) but these are the only ones that you need to know how to use, and don't feel obligated to memorize them:
-
-|Name|Purpose|
-|---|---|
-|`add(value)`|Appends the specified element to the end of this Vector.|
-|`get(index)`|Returns the element at the specified position in this Vector.|
-|`removeElement(value)`| Removes the first (lowest-indexed) occurrence of the argument from this vector.|
-|`removeElementAt(index)`| Deletes the component at the specified index.|
-|`size()`| Returns the number of components in this vector.|
-
-
 
 ### Hashmaps
 
@@ -170,23 +129,32 @@ A hashmap is like a vector but instead of using an index it uses a 'key'. Every 
 basically instead of accessing your value with a number you access it with a variable of your choice. For example if you want to know what the FRC game was for a particular year you can use a hashmap, instead of using a regular index that starts at 0 you can use whatever kind of index you want! Since we are using year we can still input an integer but we don't need to start at zero
 
 ```java
-HashMap<Integer, String> FRC_Games = new HashMap<Integer, String>();
+import java.util.*;
 
-FRC_Games.put(2011, "Logo Motion");
-FRC_Games.put(2012, "Rebound Rumble");
-FRC_Games.put(2013, "Ultimate Ascent");
-FRC_Games.put(2014, "Aerial Assist");
-FRC_Games.put(2015, "Recycle Rush");
-FRC_Games.put(2016, "Stronghold");
-FRC_Games.put(2017, "Steamworks");
-FRC_Games.put(2018, "Power Up");
-FRC_Games.put(2019, "Deep Space");
-FRC_Games.put(2020, "Infinite Recharge");
-FRC_Games.put(2021, "No Game");
-FRC_Games.put(2022, "Rapid React");
-FRC_Games.put(2023, "Charged Up");
+class ArrayDemo {
 
-String lastYear = FRC_Games.get(2023);
+	public static void main (String[] args) {
+
+	    HashMap<Integer, String> FRC_Games = new HashMap<Integer, String>();
+
+        FRC_Games.put(2011, "Logo Motion");
+        FRC_Games.put(2012, "Rebound Rumble");
+        FRC_Games.put(2013, "Ultimate Ascent");
+        FRC_Games.put(2014, "Aerial Assist");
+        FRC_Games.put(2015, "Recycle Rush");
+        FRC_Games.put(2016, "Stronghold");
+        FRC_Games.put(2017, "Steamworks");
+        FRC_Games.put(2018, "Power Up");
+        FRC_Games.put(2019, "Deep Space");
+        FRC_Games.put(2020, "Infinite Recharge");
+        FRC_Games.put(2021, "No Game");
+        FRC_Games.put(2022, "Rapid React");
+        FRC_Games.put(2023, "Charged Up");
+
+        System.out.println(FRC_Games.get(2023));//should print "Charged Up"
+	    
+	}
+}
 ```
 
 Like a dynamic array hashmaps can change in size and are accessed like a class, here are a few useful methods for hashmaps:

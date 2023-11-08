@@ -97,7 +97,7 @@ The technical definition of a hashmap is a set of key-value pairs. But what does
 Essentially, instead of using indices to access values, hashmaps use keys. Keys can be any value, of any type. Each key directly corresponds to a value, which can also be of any type. The best way to explain this is with an example. Let's say we wanted to map years to their FRC game:
 
 ```java
-	    HashMap<int, String> FRC_Games = new HashMap<int, String>();
+	    HashMap<Integer, String> FRC_Games = new HashMap<Integer, String>();
 
         FRC_Games.put(2011, "Logo Motion");
         FRC_Games.put(2012, "Rebound Rumble");

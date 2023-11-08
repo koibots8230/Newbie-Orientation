@@ -1,17 +1,24 @@
 package com.koibots;
 
 import java.util.HashMap;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 
 public final class Main {
     public static void main(String... args) {
-        HashMap<Integer, String> teams = new HashMap<Integer, String>();
-        teams.put(1, "Copperhead Robotics");
-        teams.put(2, "The Blair Robot Project");
-        teams.put(3, "Cometbots");
-        teams.put(4, "Blue Cheese");
-        teams.put(5, "the STAGS");
+        int num = 10;
+        BufferedReader BufReader = new BufferedReader(new InputStreamReader(System.in));
+        String input = BufReader.readLine();
 
-        System.out.println(teams);
+        while (num != 0) {
+            System.out.println(num);
+            num--;
+        }
+
+        while (input != "8230") {
+            System.out.println("\n");
+            input = BufReader.readLine();
+        }
     }
 }

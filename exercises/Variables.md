@@ -10,7 +10,7 @@ Let's break this down. We can break it into 6 parts:
 1. public
     - This is a modifier that allows that variable to be seen and edited by other classes. The opposite of this is *private*, which limits the variable to that class. If you fail to specify, the variable will instead be available to every class within its package (shown at the top of a file)
 2. static
-   - This is a modifier that make the variable belong to the class itself, instead of belonging to an instance of the class (we'll get into what this means later). Essentially, constants should have this, and not much else. If something is complaining that it "can't make a static reference to a non-static field", make the applicable variable static, and it should fix it
+   - This is a modifier that make the variable belong to the class itself, instead of belonging to an instance of the class (we'll get into what this means later). Essentially, constants should have this, and not much else. If something is complaining that it "can't make a static reference to a non-static field", make the applicable variable static (or preferably make the function that is using the variable non-static), and it should fix it
 3. final
     - This makes it so that the variable cannot be edited after this declaration. To not have this, simply don't include the *final* keyword
 4. int

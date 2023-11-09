@@ -16,7 +16,7 @@ You might recognize that kind of deceleration. In fact, you've been seeing one t
 
 ### Constructors
 
-Before we can do anything with our class, we have to create a constructor. A constructor is run whenever a class is instantiated(when an instance of it is created). When the class is instantiated, it can be given a set of data in the form of arguments. These arguments can be of any type.
+Before we can do anything with our class, we have to create a constructor. A constructor is run whenever a class is initialized(when an instance of it is created). When the class is initialized, it can be given a set of data in the form of arguments. These arguments can be of any type.
 Here's an example of a constructor for our car example:
 ```java
 public class Car {

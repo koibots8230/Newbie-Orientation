@@ -32,9 +32,9 @@ In code, subsystems are mean to be kind of digital versions of actual subsystems
 
 Here's what an empty subsystem looks like:
 ```java
-public class Subsystem extends SubsystemBase {
+public class ExampleSubsystem extends SubsystemBase {
 
-    public Subsystem() {
+    public ExampleSubsystem() {
 
     }
 
@@ -52,11 +52,11 @@ So the thing with subsystems is that they have to be accessed by other classes, 
 
 Here's an example:
 ```java
-public class Subsystem extends SubsystemBase {
+public class ExampleSubsystem extends SubsystemBase {
 
     private static Subsystem subsystem = new Subsystem();
 
-    Subsystem() {
+    private ExampleSubsystem() {
 
     }
 
@@ -72,7 +72,7 @@ Speaking about methods, while you can do things without them, it is much easier 
 
 **Example**
 
-[Here's](https://github.com/koibots8230/Koibots-2023/blob/main/src/main/java/frc/robot/subsystems/IntakeSubsystem.java) an example of a subsystem from last year's bot
+[Here's](https://github.com/koibots8230/Koibots-2023/blob/main/src/main/java/frc/robot/subsystems/IntakeSubsystem.java) an example of a subsystem from last year's bot.
 
 ### Commands
 

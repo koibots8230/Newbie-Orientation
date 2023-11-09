@@ -12,15 +12,15 @@ The problem with odometry is that it looses accuracy fast. The minute the robot 
 
 Let's take the example of the charge station from last year's game. The charge station was essentially a wide se-saw, and robots would get points for balancing on it at the end of auto, and at the end of the match. As a short robot with one of the most consistent balances in the district, we oftentimes were the ones balancing during auto. 
 
-The thing is, since the charge station goes at an angle, when the robot travels 1m, it doesn't actually travel 1m forward on the field because the hypotenuse is longer than the base of a right triangle. 
+The thing is, since the charge station goes at an angle, when the robot travels 1m, it doesn't actually travel 1m forward on the field because the hypotenuse is longer than the base of a right triangle. While we can fix this with some simple trigonometry, it wasn't always completely accurate.
 
-This leads to odometry being off by a large margin. As such, we didn't make use of odometry last year. 
+This, along with the heavy defense that took place in last year's game, led to odometry being off by a large margin. As such, we didn't make use of odometry last year. 
 
-While this is a big problem, odometry can still be helpful for the autonomous phase, because you most likely will not encounter obstacles, as it's uncommon for obstacles to be present in the area where autonomous is. 
+While this is a big problem, odometry can still be helpful for the autonomous phase, as odometry won't get too far off during the first 15 seconds of a match. 
 
 ### In Code
 
-In code, odometry is defined like this:
+In code, odometry for tank drive is defined like this:
 ```java
 DifferentialDriveOdometry odometry = new DifferentialDriveOdometry(
     rotation2d,

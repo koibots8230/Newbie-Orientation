@@ -18,7 +18,7 @@ Let's start with distances. To make a good autonomous, you have to make the robo
 
 Now onto curves. You won't be getting a perfectly straight path 100% of the time. Often, you'll have to make the robot curve to get to it's destination. The easiest way to do this is to have the two sides of the tank drive move at different speeds. When it comes down to what speeds and what encoder values, guess what? You have to guess and check again. 
 
-*Note:* Some tools exist to make this simpler and more efficient, and we are working on getting one to work, but for now, we're going to stick with this approach. 
+*Note:* Some tools exist to make drive paths simpler and more efficient, and we are working on getting one to work, but for now, we're going to stick with this approach. 
 
 ### Command Groups
 
@@ -84,3 +84,5 @@ Autonomous routines are great to make and see run on the robot, but they can be 
 - You yell "enabling" **before** you enable the robot
 
 Another thing to note: for these purposes, there is no reason to have the robot go above 50% speed in autonomous. It often decreases accuracy, and invites the opportunity for someone to get hurt. **Keep the speed below 50%.**
+
+**Reminder: Failure to follow safety guidelines will result in <u>immediate disciplinary action</u>. This is not a joke. People can get hurt.**

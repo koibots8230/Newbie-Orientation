@@ -1,65 +1,46 @@
 package com.koibots;
 
 import java.lang.System;
-import java.util.Scanner;
-import java.util.Random;
+// import java.util.Scanner;
+// import java.util.Random;
 // import com.koibots.Constants; 
 // import java.util.HashMap;
 
+class Toaster {
+    public int strength;
+
+    public Toaster(int strength) {
+        this.strength = strength;
+    }
+
+    public String toast(String food) {
+        if (this.strength < 1) {
+            return food;
+        } else if (this.strength > 5) {
+            return "ash";
+        } else {
+            // Normal strength
+            if (food == "bread") {
+                return "toast";
+            } else {
+                return "toasted " + food;
+            }
+        }
+    }
+}
+
+
 public final class Main {
     public static void main(String... args) {
-        // Countdown
+        Toaster niftyToaster = new Toaster(2);
+        Toaster weirdToaster = new Toaster(8);
+        Toaster brokenToaster = new Toaster(0);
 
-        System.out.println("Countdown \n");
+        System.out.println(niftyToaster.toast("waffle"));
+        System.out.println(niftyToaster.toast("bread"));
 
-        int countdown = 10;
-        while (countdown >= 0) {
-            System.out.println(countdown);
-            countdown--;
-        }
+        System.out.println(weirdToaster.toast("bread"));
 
-        // Generate random number list
-
-        System.out.println("\nList loop \n");
-
-        int[] numberList = new int[10];
-        Random rand = new Random();
-
-        for (int i = 0; i < 10; i++) {
-            int randomNumber = rand.nextInt(100);
-            numberList[i] = randomNumber;
-        }
-
-        // Print random list
-
-        for (int i = 0; i < numberList.length; i++) {
-            System.out.println(numberList[i]);
-        }
-
-        // Input
-
-        System.out.println("\nType in 8230 (please?) \n");
-
-        Scanner scan = new Scanner(System.in);
-        int givenNumber = 0;
-        while (givenNumber != 8230) {
-            givenNumber = scan.nextInt();
-        }
-        scan.close();
-
-        // Random list in random order??
-
-            // I don't know where to start
-
-        // Only odd numbers of a randomly generated list
-
-        System.out.println("\nOnly odd numbers \n");
-
-        for (int i = 0; i < numberList.length; i++) {
-            if (numberList[i] % 2 == 0) {
-                continue;
-            }
-            System.out.println(numberList[i]);
-        }
+        System.out.println(brokenToaster.toast("singular banana coin"));
     }
 }

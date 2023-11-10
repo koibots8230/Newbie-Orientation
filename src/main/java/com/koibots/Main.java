@@ -40,6 +40,7 @@ public final class Main {
         System.out.println(niftyToaster.toast("bread"));
 
         System.out.println(weirdToaster.toast("bread"));
+        System.out.println(weirdToaster.toast("entire cheese wheel"));
 
         System.out.println(brokenToaster.toast("singular banana coin"));
     }

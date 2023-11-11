@@ -1,4 +1,5 @@
 # WPIlib Specific
+* .hprof
 
 dependency-reduced-pom.xml
 doxygen.log

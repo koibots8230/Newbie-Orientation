@@ -75,4 +75,4 @@ This is to teach you the basics on how to program in java, and more specifically
  - [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
  - [Google Java Style Guide](https://google.github.io/styleguide/javaguide.html)
  - [CodeAesthetic](https://www.youtube.com/@CodeAesthetic/videos)
- - [State-Space Control](https://www.youtube.com/playlist?list=PLn8PRpmsu08podBgFw66-IavqU2SqPg_w)
+ - [State-Space Control](https://www.youtube.com/playlist?list=PLn8PRpmsu08podBgFw66-IavqU2SqPg_w)g

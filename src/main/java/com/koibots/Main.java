@@ -1,17 +1,15 @@
 package com.koibots;
-
-import java.lang.System;
-import com.koibots.Constants;
+import com.koibots.Mouse;
 
 public final class Main {
     public static void main(String [] args) {
-       if (Constants.intNumber == 3){
-        System.out.println("this number is three");
-       } else if (Constants.intNumber % 2 == 1){
-        System.out.println("this is really weird");
-       }
-       else {
-        System.out.println("whoopsie daisy!");
-       }
+        Mouse bartoloMyLove = new Mouse ("Bartolo", "black", 100); //ell oh ell.
+        Mouse hippyLoser = new Mouse ("hippyLoser", "purple", 3);
+
+        String BpublicOpinion = bartoloMyLove.publicOpinion(bartoloMyLove.name); //the B is for Bartolo
+        String HpublicOpinion = hippyLoser.publicOpinion(hippyLoser.name); //the H is for hippyLoser.
+        
+        System.out.println(BpublicOpinion);
+        System.out.println(HpublicOpinion);
     }
-}
+    }

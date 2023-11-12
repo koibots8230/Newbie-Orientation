@@ -9,5 +9,7 @@ public final class Main {
         int intNumber =  3;
         
         System.out.printf("My magic number is %d%n", intNumber);
+
+        System.out.println(Constants.DOUBLE_NUMBER);
     }
 }

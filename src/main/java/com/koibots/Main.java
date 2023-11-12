@@ -4,12 +4,17 @@ import java.lang.System;
 
 public final class Main {
     public static void main(String... args) {
-        System.out.println("blah blah blah");
+        int intNumber =  5;
         
-        int intNumber =  3;
-        
-        System.out.printf("My magic number is %d%n", intNumber);
+        if (intNumber == 3) {
+            System.out.println("it is equal to three.");
+        } 
+        else if (intNumber % 2 == 1){
+            System.out.println("this is an odd number.");
 
-        System.out.println(Constants.DOUBLE_NUMBER);
+        }
+
+
+        
     }
 }

@@ -7,6 +7,11 @@ package frc.robot;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+// import frc.robot.subsystems.TankDriveSubsystem;
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.RelativeEncoder;
+import com.revrobotics.CANSparkMax.IdleMode;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -20,9 +25,27 @@ public class Robot extends TimedRobot {
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
    */
+  private CANSparkMax motor1;
+  private CANSparkMax motor2;
+  private RelativeEncoder encoder1;
+
   @Override
   public void robotInit() {
-    
+    motor1 = new CANSparkMax(
+        Constants.MOTOR_PORT,
+        MotorType.kBrushless
+    );
+    motor2 = new CANSparkMax(
+        Constants.ANOTHER_MOTOR_PORT,
+        MotorType.kBrushless
+    );
+
+    motor2.follow(motor1);
+
+    motor1.setIdleMode(IdleMode.kBrake);
+    motor2.setIdleMode(IdleMode.kBrake);
+
+    encoder1 = motor1.getEncoder();
   }
 
   /**
@@ -58,11 +81,18 @@ public class Robot extends TimedRobot {
 
   /** This function is called once when teleop is enabled. */
   @Override
-  public void teleopInit() {}
+  public void teleopInit() {
+    encoder1.setPosition(0);
+    encoder1.setPositionConversionFactor(2);
+  }
 
   /** This function is called periodically during operator control. */
   @Override
-  public void teleopPeriodic() {}
+  public void teleopPeriodic() {
+    motor1.set(0.5);
+
+    System.out.println(encoder1.getPosition());
+  }
 
   /** This function is called once when the robot is disabled. */
   @Override

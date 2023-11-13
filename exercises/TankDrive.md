@@ -10,7 +10,7 @@ A drive train is what makes the robot move. It can come in many forms, but it wi
 
 We use Xbox controllers to control the robot. More specifically, we have it so the left joystick's y-axis controls the left side, and the right joystick the right. 
 
-Keep in mind, because the controller isn't perfect, the joysticks are not going to be at a perfect 0. So, it's a good idea to create a deadzone for them. We do this by checking if the joystick's value is greater than |0.15| (preferably a smaller number, this is just a super-safe value), and if it isn't, just ignoring the input.
+Keep in mind, because the controller isn't perfect, the joysticks are not going to be at a perfect 0. So, it's a good idea to create a deadzone for them. We do this by checking if the joystick's value is greater than |0.15| (preferably a smaller number, this is just a super-safe value), and if it isn't, we act like it's zero.
 
 ### How to Make Controllers  
 To create a Xbox controller, use the following syntax: 

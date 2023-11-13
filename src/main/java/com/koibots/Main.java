@@ -1,26 +1,61 @@
 package com.koibots;
 import java.lang.System;
-import java.util.*;
+import java.util.Random;
+import java.util.Scanner;
+import com.koibots.Constants;
 
 public final class Main{
-    public static void main(String... args) {
-        String[] gamesinlibrary = {"3", "4", "too many"};
-        gamesinlibrary[2] = "too many + 1";
-        System.out.println(gamesinlibrary[2]);
+    public static void main(String[] args) {
+        int x = 10;
+        while (x > 0) {
+            System.out.println(x);
+            x--;
+        }
+        System.out.println("-");
 
-        HashMap<Integer, String> BlacksburgTeams = new HashMap<Integer, String>();
+        Random rand = new Random();
+        int[] randomNums = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        for (int y = 0; y < 10; y++){
+            randomNums[y] = rand.nextInt(10);
+        }
+        for (int z = 0; z < 10; z++){
+            System.out.println(randomNums[z]);
+        }
+        System.out.println("-");
 
-        BlacksburgTeams.put(8230, "KoiBots");
-        BlacksburgTeams.put(401, "Copperhead Robotics");
-        BlacksburgTeams.put(1086, "Blue Cheese");
-        BlacksburgTeams.put(1793, "The Aviators");
-        BlacksburgTeams.put(5724, "Spartan Robotics");
+        Scanner inputNum = new Scanner(System.in);
+        System.out.println("Enter the KoiBots team number");
+        while(true) {
+            System.out.println(Constants.KOI_TEAM_NUM);
+            int koiTeamNumUser = inputNum.nextInt();
+            System.out.println(koiTeamNumUser);
+            if (koiTeamNumUser != Constants.KOI_TEAM_NUM) {
+                System.out.println("That is incorrect, try again.");
+            }
+            else {
+                System.out.println("That is correct!");
+                break;
+            }
+        }
+        System.out.println("-");
 
-        Object[] BlacksburgTeamNums = BlacksburgTeams.keySet().toArray();
+        int[] plantedRandNums = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        for (int a = 0; a < 10; a++) {
+            int randPlantingNum = rand.nextInt(10);
+            int plantingNumPos = a;
+            plantedRandNums[plantingNumPos] = randPlantingNum;
+            System.out.println(plantedRandNums[plantingNumPos]);
+        }
+        System.out.println("-");
 
-        System.out.println(BlacksburgTeams.get(401));
-        System.out.println(BlacksburgTeams.get(1793));
-        System.out.println(BlacksburgTeamNums[0]);
-        System.out.println(BlacksburgTeamNums[4]);
+        int[] randomList = {0, 0, 0, 0, 0};
+        for (int b = 0; b < 5; b++) {
+            int randomNum = rand.nextInt(50);
+            randomList[b] = randomNum;
+            if (randomNum % 2 == 0) {
+                continue;
+            }
+            System.out.println(randomList[b]);
+        }
     }
 }

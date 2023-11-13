@@ -1,5 +1,5 @@
 package com.koibots;
 
 public class Constants {
-    public static final double DOUBLE_NUMBER = 0.5;
+    public static final int KOI_TEAM_NUM = 8230;
 }

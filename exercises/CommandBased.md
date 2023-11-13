@@ -169,3 +169,5 @@ In order to keep the main directory clean (`src/main/java/frc/robot`), we ask th
 ## Instructions
 
 Refactor your tank drive code to be in command based. You have all the knowledge you need, but if you need help, ask(google it first though!).
+
+*Hint:* Use a default command for driving around

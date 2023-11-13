@@ -53,13 +53,12 @@ This is to teach you the basics on how to program in java, and more specifically
 
 **More Advanced Concepts**
 
-13. [401's 2023 Robot](exercises/401-2023.md) 
-14. [Odometry](exercises/Odometry.md) 
-15. [Simulation & Logging](exercises/SimulationAndLogging.md)
-16. [Autonomous](exercises/Autonomous.md)
-17. [PID Loops](exercises/PIDLoops.md)
-18. [Kinematics](exercises/Kinematics.md)
-19. [Computer Vision](exercises/Vision.md)
+13.  [Odometry](exercises/Odometry.md) 
+14.  [Simulation & Logging](exercises/SimulationAndLogging.md) **Incomplete**
+15.  [Autonomous](exercises/Autonomous.md)
+16.  [PID Loops](exercises/PIDLoops.md)
+17.  [Kinematics](exercises/Kinematics.md) **Incomplete**
+18.  [Computer Vision](exercises/Vision.md)
 
 ---
 

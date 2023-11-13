@@ -1,0 +1,14 @@
+# Query: clone 
+# ContextLines: 1
+
+2 results - 1 file
+
+README.md:
+  11     + Otherwise, use the link above to download and install Git
+  12: 3. Clone this git repository
+  13     1. Click on the green `<> Code` button above the files
+
+  15     3. Open a terminal window
+  16:    4. Type in `git clone `, then paste
+  17     5. Hit enter
+

@@ -31,3 +31,13 @@
 - `git branch -a`
 - `git fetch` vs. `git pull`
 - `git tag` on successful
+
+java
+    package com.koibots;
+
+    public final class Main {
+        public static void main(String... args) {
+            System.out.println("Welcome to the Koibots!");
+        }
+    }
+    

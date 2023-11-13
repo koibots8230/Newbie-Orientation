@@ -5,6 +5,7 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 // import frc.robot.subsystems.TankDriveSubsystem;
@@ -25,27 +26,27 @@ public class Robot extends TimedRobot {
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
    */
-  private CANSparkMax motor1;
-  private CANSparkMax motor2;
-  private RelativeEncoder encoder1;
+  private CANSparkMax motorL;
+  private CANSparkMax motorR;
+  private RelativeEncoder encoderL;
+  private RelativeEncoder encoderR;
 
   @Override
   public void robotInit() {
-    motor1 = new CANSparkMax(
-        Constants.MOTOR_PORT,
+    motorL = new CANSparkMax(
+        Constants.LEFT_MOTOR_PORT,
         MotorType.kBrushless
     );
-    motor2 = new CANSparkMax(
-        Constants.ANOTHER_MOTOR_PORT,
+    motorR = new CANSparkMax(
+        Constants.RIGHT_MOTOR_PORT,
         MotorType.kBrushless
     );
 
-    motor2.follow(motor1);
+    motorL.setIdleMode(IdleMode.kBrake);
+    motorR.setIdleMode(IdleMode.kBrake);
 
-    motor1.setIdleMode(IdleMode.kBrake);
-    motor2.setIdleMode(IdleMode.kBrake);
-
-    encoder1 = motor1.getEncoder();
+    encoderL = motorL.getEncoder();
+    encoderR = motorR.getEncoder();
   }
 
   /**
@@ -80,18 +81,21 @@ public class Robot extends TimedRobot {
   }
 
   /** This function is called once when teleop is enabled. */
+  private XboxController controller;
+
   @Override
   public void teleopInit() {
-    encoder1.setPosition(0);
-    encoder1.setPositionConversionFactor(2);
+    controller = new XboxController(0);
+
+    encoderL.setPosition(0);
+    encoderR.setPosition(0);
   }
 
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    motor1.set(0.5);
-
-    System.out.println(encoder1.getPosition());
+    motorL.set(controller.getLeftY());
+    motorR.set(controller.getRightY());
   }
 
   /** This function is called once when the robot is disabled. */

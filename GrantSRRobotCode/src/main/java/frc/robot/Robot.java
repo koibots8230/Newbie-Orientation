@@ -7,14 +7,12 @@ import java.frc.robot.Constants;
 import java.lang.Math;
 
 public class Robot extends TimedRobot {
-  private CANSparkMax leftMotor01 = new CANSparkMax(Constants.LEFT_MOTOR_01, MotorType.kBrushless);
-  private CANSparkMax leftMotor02 = new CANSparkMax(Constants.LEFT_MOTOR_02, MotorType.kBrushless);
-  private CANSparkMax rightMotor01 = new CANSparkMax(Constants.RIGHT_MOTOR_01, MotorType.kBrushless);
-  private CANSparkMax rightMotor02 = new CANSparkMax(Constants.RIGHT_MOTOR_02, MotorType.kBrushless);
-  private XboxControler controller = new XboxControler(0);
 
   @Override
   public void robotInit() {
+    CANSparkMax leftMotor01 = new CANSparkMax(Constants.LEFT_MOTOR_01, MotorType.kBrushless);
+    CANSparkMax rightMotor01 = new CANSparkMax(Constants.RIGHT_MOTOR_01, MotorType.kBrushless);
+    XboxControler controller = new XboxControler(0);
   }
 
   @Override
@@ -34,21 +32,13 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopPeriodic() {
-    leftMotor02.follow(leftMotor01);
-    rightMotor02.follow(rightMotor01);
+    rightMotor01.follow(leftMotor01);
 
-    if (Math.abs(controller.getLeftY()) <= 0.15) {
+    if (Math.abs(controller.getLeftY()) <= constants.DEADZONE) {
       leftMotor01.set(0);
     }
     else {
       leftMotor01.set(controller.getLeftY());
-    }
-
-    if (Math.abs(controller.getRightY()) <= 0.15) {
-      rightMotor01.set(0);
-    }
-    else {
-      rightMotor01.set(controller.getRightY());
     }
   }
 

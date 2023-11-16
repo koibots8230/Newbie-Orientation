@@ -1,19 +1,26 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import java.frc.robot.Constants;
+import frc.robot.Constants;
 import java.lang.Math;
-import vendordeps.REVLib;
+
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+
 
 public class Robot extends TimedRobot {
 
+  private CANSparkMax leftMotor;
+  private CANSparkMax rightMotor;
+  private XboxController controller;
+
   @Override
   public void robotInit() {
-    CANSparkMax leftMotor01 = new CANSparkMax(Constants.LEFT_MOTOR_01, MotorType.kBrushless);
-    CANSparkMax rightMotor01 = new CANSparkMax(Constants.RIGHT_MOTOR_01, MotorType.kBrushless);
-    XboxControler controller = new XboxControler(0);
+    leftMotor = new CANSparkMax(Constants.LEFT_MOTOR_01, MotorType.kBrushless);
+    rightMotor = new CANSparkMax(Constants.RIGHT_MOTOR_01, MotorType.kBrushless);
   }
 
   @Override
@@ -34,18 +41,18 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
 
-    if (Math.abs(controller.getLeftY()) <= constants.DEADZONE) {
-      leftMotor01.set(0);
+    if (Math.abs(controller.getLeftY()) <= Constants.DEADZONE) {
+      leftMotor.set(0);
     }
     else {
-      leftMotor01.set(controller.getLeftY());
+      leftMotor.set(controller.getLeftY());
     }
 
-    if (Math.abs(controller.getRightY()) <= constants.DEADZONE) {
-      rightMotor01.set(0);
+    if (Math.abs(controller.getRightY()) <= Constants.DEADZONE) {
+      rightMotor.set(0);
     }
     else {
-      rightMotor01.set(controller.getRightY());
+      rightMotor.set(controller.getRightY());
     }
   }
 

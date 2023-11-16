@@ -4,10 +4,14 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import java.frc.robot.Constants;
+import java.lang.Math;
 
 public class Robot extends TimedRobot {
-  private CANSparkMax motor01 = new CANSparkMax(Constants.MOTOR_PORT01, MotorType.kBrushless);
-  private CANSparkMax motor02 = new CANSparkMax(Constants.MOTOR_PORT02, MotorType.kBrushless);
+  private CANSparkMax leftMotor01 = new CANSparkMax(Constants.LEFT_MOTOR_01, MotorType.kBrushless);
+  private CANSparkMax leftMotor02 = new CANSparkMax(Constants.LEFT_MOTOR_02, MotorType.kBrushless);
+  private CANSparkMax rightMotor01 = new CANSparkMax(Constants.RIGHT_MOTOR_01, MotorType.kBrushless);
+  private CANSparkMax rightMotor02 = new CANSparkMax(Constants.RIGHT_MOTOR_02, MotorType.kBrushless);
+  private XboxControler controller = new XboxControler(0);
 
   @Override
   public void robotInit() {
@@ -23,26 +27,29 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousPeriodic() {
   }
-  private final RelativeEncoder motorEncoder01 = motor01.getEncoder();
 
   @Override
   public void teleopInit() {
-    motorEncoder01.setPosition(0);
-    if(motorEncoder01.getPosition() >= 2) {
-      motorEncoder01.setPosition(0);
-    }
-
-    while (True = True) {
-      System.out.println(motorEncoder01.getPosition());
-    }
   }
 
   @Override
   public void teleopPeriodic() {
-    motor01.set(0.5);
-    motor02.folow(motor01);
-    motor01.setIdleMode(IdleMode.kBreak);
-    motor02.setIdleMode(IdleMode.kBreak);
+    leftMotor02.follow(leftMotor01);
+    rightMotor02.follow(rightMotor01);
+
+    if (Math.abs(controller.getLeftY()) <= 0.15) {
+      leftMotor01.set(0);
+    }
+    else {
+      leftMotor01.set(controller.getLeftY());
+    }
+
+    if (Math.abs(controller.getRightY()) <= 0.15) {
+      rightMotor01.set(0);
+    }
+    else {
+      rightMotor01.set(controller.getRightY());
+    }
   }
 
   @Override

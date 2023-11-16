@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import java.frc.robot.Constants;
 import java.lang.Math;
+import vendordeps.REVLib;
 
 public class Robot extends TimedRobot {
 

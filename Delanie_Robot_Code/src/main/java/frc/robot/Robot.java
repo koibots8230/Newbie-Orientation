@@ -4,9 +4,14 @@
 
 package frc.robot;
 
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.SparkMaxRelativeEncoder;
+import com.revrobotics.CANSparkMax.IdleMode;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+
 import edu.wpi.first.wpilibj.TimedRobot;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+//import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
+//import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -15,17 +20,19 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  * project.
  */
 public class Robot extends TimedRobot {
+  CANSparkMax motor1;
+  CANSparkMax motor2;
 
-  private final RomiDrivetrain m_drivetrain = new RomiDrivetrain();
+  SparkMaxRelativeEncoder encoder1;
+  SparkMaxRelativeEncoder encoder2;
+
 
   /**
    * This function is run when the robot is first started up and should be used for any
    * initialization code.
    */
   @Override
-  public void robotInit() {
-   
-  }
+  public void robotInit() {}
 
   /**
    * This function is called every 20 ms, no matter the mode. Use this for items like diagnostics
@@ -60,11 +67,29 @@ public class Robot extends TimedRobot {
 
   /** This function is called once when teleop is enabled. */
   @Override
-  public void teleopInit() {}
+  public void teleopInit() {
+    encoder1.setPosition(0);
+    encoder2.setPosition(0);
+    
+
+    motor1.setIdleMode(IdleMode.kBrake);
+    motor2.setIdleMode(IdleMode.kBrake);
+
+    encoder1.setPositionConversionFactor(2);
+    encoder2.setPositionConversionFactor(2);
+  }
 
   /** This function is called periodically during operator control. */
   @Override
-  public void teleopPeriodic() {}
+  public void teleopPeriodic() {
+    motor1.set(0.5);
+    motor2.follow(motor1);
+    
+    encoder1.getPosition();
+    encoder2.getPosition();
+
+   System.out.println(encoder1.getPosition());
+  }
 
   /** This function is called once when the robot is disabled. */
   @Override

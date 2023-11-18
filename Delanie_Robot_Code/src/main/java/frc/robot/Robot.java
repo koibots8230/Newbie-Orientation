@@ -5,11 +5,8 @@
 package frc.robot;
 
 import com.revrobotics.CANSparkMax;
-<<<<<<< HEAD
 import com.revrobotics.SparkMaxRelativeEncoder;
 import com.revrobotics.CANSparkMax.IdleMode;
-=======
->>>>>>> origin/Delanie
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.TimedRobot;
@@ -85,7 +82,6 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-<<<<<<< HEAD
     motor1.set(0.5);
     motor2.follow(motor1);
     
@@ -93,10 +89,6 @@ public class Robot extends TimedRobot {
     encoder2.getPosition();
 
    System.out.println(encoder1.getPosition());
-=======
-    final CANSparkMax motor1 = new CANSparkMax(1, MotorType.kBrushless);
-    motor1.set(0.5);
->>>>>>> origin/Delanie
   }
 
   /** This function is called once when the robot is disabled. */

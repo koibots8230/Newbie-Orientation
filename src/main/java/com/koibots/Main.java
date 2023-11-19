@@ -1,29 +1,46 @@
 package com.koibots;
 
-import java.util.HashMap;
 
 public final class Main {
+
     public static void main(String... args) {
 
+        int v = 10;
         
-        HashMap <Integer , String> FRC_Teams = new HashMap <Integer, String>();
-
-        FRC_Teams.put(401, "Copperhead Robotics");
-        FRC_Teams.put(449, "The Blair Robot Project");
-        FRC_Teams.put(977, "Cometbots");
-        FRC_Teams.put(1086, "Blue Cheese");
-        FRC_Teams.put(4575, "Gemini");
-        
-        var teamname = FRC_Teams.values().toArray();
-        var teamnumber = FRC_Teams.keySet().toArray();
+        while (v > 0){
+            System.out.println(v);
+            v--;
+        }
        
-
-        System.out.println(teamnumber[1]);
-        System.out.println(teamnumber[4]);
-        System.out.println(teamname[2]);
-        System.out.println(teamname[3]);
-        
-        
-
+        Fish coelacanth = new Fish(8, 2, true);
+        boolean theyDidAte = coelacanth.eat("shoe");
     }
+
+    public static class Fish {
+        public int numOfFins;
+        public int numOfeyes;
+        public boolean hasScales;
+       
+        public Fish(int numOfFins, int numOfeyes, boolean hasScales) {
+            this.numOfFins = 8;
+            this.numOfeyes = 2;
+            this.hasScales = true;
+        }
+        
+
+        public boolean eat(String food) {
+            System.out.println(food);
+
+            
+            if (food == "steak" ) {
+                return true;
+            }
+            return false;
+        }
+
+    
+       
+    }
+ 
+    
 }

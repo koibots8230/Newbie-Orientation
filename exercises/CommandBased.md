@@ -54,14 +54,14 @@ Here's an example:
 ```java
 public class ExampleSubsystem extends SubsystemBase {
 
-    private static Subsystem subsystem = new Subsystem();
+    private static ExampleSubsystem exampleSubsystem = new ExampleSubsystem();
 
     private ExampleSubsystem() {
 
     }
 
     public static Subsystem get() {
-        return Subsystem
+        return exampleSubsystem;
     }
 }
 ```
@@ -86,6 +86,7 @@ package com.koibots.commands;
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 class ExampleCommand extends CommandBase {
+
     public ExampleCommand() {
         addRequirements();
     }

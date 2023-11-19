@@ -5,12 +5,6 @@ public final class Main {
 
     public static void main(String... args) {
 
-        int v = 10;
-        
-        while (v > 0){
-            System.out.println(v);
-            v--;
-        }
        
         Fish coelacanth = new Fish(8, 2, true);
         boolean theyDidAte = coelacanth.eat("shoe");

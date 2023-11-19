@@ -167,8 +167,26 @@ The command scheduler is a singleton that handles both subsystems and commands. 
 
 In order to keep the main directory clean (`src/main/java/frc/robot`), we ask that you have subsystems in a subsystems folder, and commands in a commands folder.
 
+### Robot Container
+
+Robot Container is a new file that you'll find when you make a command-based project. Robot container is *intended* to be the place where you initialize subsystems, but we have a better alternative you saw earlier. Luckily, it has two other main purposes: control bindings & auto management. I'm not going to get into autos (look at the auto lesson for that), but for now, just leave the `getAutonomousCommand()` thing alone. 
+
+Controls are the main use for robot container that we see. Controls are done using the `Trigger` and `CommandXboxController` classes, both built in to wpi lib. The `CommandXboxController` is pretty similar to the normal `XboxController` class, with joysticks even working the same (`getLeftY()`, etc). The big difference comes with the other buttons. Instead of returning a boolean value for things like the a & b buttons, it returns a trigger.
+
+Using the trigger, we can bind that button to a certain command. We've got a few options here: `whileTrue()`, `whileFalse()`, `onTrue()` and `onFalse()`. The whiles run the command for the duration of either the trigger being pressed (true) or the duration of it being not pressed (false), then call its `end()` method when the duration ends. The ons do that, but only call the `init()`, either when its first pressed, or first released. Note: the ons never call the `end()` method, so if you set a motor, either use a while, or use the inverse (set it to whatever on true, set it back to 0 on false) Here's an example of a trigger:
+```java
+Trigger xButton = controller.getX();
+xButton.whileTrue(command);
+```
+
+Button bindings, as you might expect, go in the `configureButtonBindings()` method. 
+
 ## Instructions
 
 Refactor your tank drive code to be in command based. You have all the knowledge you need, but if you need help, ask(google it first though!).
+
+Also, make a button that just makes it move at 20% forward (just to practice button bindings)
+
+You're going to have to create a new project for this, follow the same steps as in Hello Robot, but select command based, not time based.
 
 *Hint:* Use a default command for driving around

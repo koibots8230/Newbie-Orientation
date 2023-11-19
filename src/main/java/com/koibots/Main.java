@@ -2,12 +2,12 @@ package com.koibots;
 
 
 public final class Main {
-
     public static void main(String... args) {
 
        
         Fish coelacanth = new Fish(8, 2, true);
-        boolean theyDidAte = coelacanth.eat("shoe");
+        boolean theyDidAte = coelacanth.eat(null);
+        System.out.println(theyDidAte);
     }
 
     public static class Fish {

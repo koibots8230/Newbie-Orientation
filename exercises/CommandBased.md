@@ -60,7 +60,7 @@ public class ExampleSubsystem extends SubsystemBase {
 
     }
 
-    public static Subsystem get() {
+    public static ExampleSubsystem get() {
         return exampleSubsystem;
     }
 }

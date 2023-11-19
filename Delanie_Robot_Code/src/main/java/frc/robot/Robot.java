@@ -5,6 +5,7 @@
 package frc.robot;
 
 import com.revrobotics.CANSparkMax;
+import com.revrobotics.RelativeEncoder;
 import com.revrobotics.SparkMaxRelativeEncoder;
 import com.revrobotics.CANSparkMax.IdleMode;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
@@ -23,8 +24,8 @@ public class Robot extends TimedRobot {
   CANSparkMax motor1;
   CANSparkMax motor2;
 
-  SparkMaxRelativeEncoder encoder1;
-  SparkMaxRelativeEncoder encoder2;
+  RelativeEncoder encoder1;
+  RelativeEncoder encoder2;
 
 
   /**
@@ -32,7 +33,12 @@ public class Robot extends TimedRobot {
    * initialization code.
    */
   @Override
-  public void robotInit() {}
+  public void robotInit() {
+    motor1 = new CANSparkMax(1, MotorType.kBrushless);
+    motor2 = new CANSparkMax(2, MotorType.kBrushless);
+    encoder1 = motor1.getEncoder();
+    encoder2 = motor2.getEncoder();
+  }
 
   /**
    * This function is called every 20 ms, no matter the mode. Use this for items like diagnostics

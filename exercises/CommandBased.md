@@ -154,6 +154,15 @@ Default commands can be assigned to a subsystem & will be used when no other com
 Subsystem.setDefaultCommand(Command);
 ```
 
+**Instant Commands**
+
+Instant commands are a way to make simple commands that don't really deserve a whole class. They take in a "Runnable", or essentially a lambda to a method. There's a few kinds:
+
+|Type|What it Does|Example|
+|---|---|---|
+|Instant Command|The most basic type, takes in a method, runs it. Optional parameter of a required subsystem|`new InstantCommand(() -> method(), requiredSubsystem);`
+|Start End Command|Similar to an instant command, but also has a method to run when it is ended|`new StartEndCommand(() -> startMethod(), () -> stopMethod(), requiredSubsystem)`|
+
 ### The Command Scheduler
 
 The command scheduler is a singleton that handles both subsystems and commands. The command scheduler runs every time that `CommandScheduler.getInstance().run()` is called. You should place that inside of robot periodic(this is one of the **only** things that should be in there). Whenever the command schedulers is run, it does 4 things, in order:
@@ -185,7 +194,8 @@ Button bindings, as you might expect, go in the `configureButtonBindings()` meth
 
 Refactor your tank drive code to be in command based. You have all the knowledge you need, but if you need help, ask(google it first though!).
 
-Also, make a button that just makes it move at 20% forward (just to practice button bindings)
+Also, make the `a` button set it to brake mode and the `b` button set it back to coast (just to practice button bindings)
+- *Hint*: Just make a simple method for this & use instant command
 
 You're going to have to create a new project for this, follow the same steps as in Hello Robot, but select command based, not time based.
 

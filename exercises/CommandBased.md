@@ -140,7 +140,7 @@ When you schedule a command, it performs a few steps:
 1. Checks that a command isn't in a composition
    - A composition is essentially a "has a" relationship between two classes. For example, a car <u>has a</u> engine. So the car class would have an instance of the engine class inside of it.
 2. Makes sure that:
-   - The scheduler isn't disabled(we'll ge5 to what the scheduler is in a minute)
+   - The scheduler isn't disabled(we'll get to what the scheduler is in a minute)
    - The command isn't already scheduled
    - The robot is disabled & the command doesn't have an exemption to run while disabled (wooo safety!)
 3. If it's requirements are in use or not. If they are in use, it will attempt to interrupt the other command(s). If it can't the command will not be scheduled.

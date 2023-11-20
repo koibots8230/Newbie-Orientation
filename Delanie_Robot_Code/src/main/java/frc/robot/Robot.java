@@ -13,6 +13,7 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import edu.wpi.first.wpilibj.TimedRobot;
 //import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 //import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.XboxController;
 
 /**
  * The VM is configured to automatically run this class, and to call the functions corresponding to
@@ -27,6 +28,9 @@ public class Robot extends TimedRobot {
   RelativeEncoder encoder1;
   RelativeEncoder encoder2;
 
+  XboxController controller;
+  double rightY;
+  double leftY;
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -38,6 +42,9 @@ public class Robot extends TimedRobot {
     motor2 = new CANSparkMax(2, MotorType.kBrushless);
     encoder1 = motor1.getEncoder();
     encoder2 = motor2.getEncoder();
+    
+
+    XboxController controller = new XboxController(0);
   }
 
   /**
@@ -88,14 +95,36 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    motor1.set(0.5);
-    motor2.follow(motor1);
+    motor1.set(controller.getRightY());
+    motor2.set(controller.getLeftY());
     
     encoder1.getPosition();
     encoder2.getPosition();
 
    System.out.println(encoder1.getPosition());
-  }
+
+   controller.getRightY();
+   controller.getLeftY();
+   double rightY = controller.getRightY();
+   double leftY = controller.getLeftY();
+
+   if (rightY >= 0.15){
+    motor1.set(rightY);
+   } if (rightY  <=-0.15){
+    motor1.set(-leftY);
+   } else {
+    motor1.set(0);
+   }
+
+
+   if (leftY >= 0.15){
+    motor2.set(leftY);
+   } else if (leftY <= -0.15){
+    motor2.set(-leftY);
+   } else {
+    motor2.set(0);
+   }
+   }
 
   /** This function is called once when the robot is disabled. */
   @Override

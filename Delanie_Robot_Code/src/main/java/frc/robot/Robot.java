@@ -29,6 +29,7 @@ public class Robot extends TimedRobot {
   RelativeEncoder encoder2;
 
   XboxController controller;
+  
   double rightY;
   double leftY;
 
@@ -40,10 +41,10 @@ public class Robot extends TimedRobot {
   public void robotInit() {
     motor1 = new CANSparkMax(1, MotorType.kBrushless);
     motor2 = new CANSparkMax(2, MotorType.kBrushless);
+
     encoder1 = motor1.getEncoder();
     encoder2 = motor2.getEncoder();
-    
-
+  
     XboxController controller = new XboxController(0);
   }
 

@@ -95,36 +95,30 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    motor1.set(controller.getRightY());
-    motor2.set(controller.getLeftY());
-    
     encoder1.getPosition();
     encoder2.getPosition();
 
-   System.out.println(encoder1.getPosition());
+    System.out.println(encoder1.getPosition());
+    rightY = controller.getRightY();
+    leftY = controller.getLeftY();
 
-   controller.getRightY();
-   controller.getLeftY();
-   double rightY = controller.getRightY();
-   double leftY = controller.getLeftY();
-
-   if (rightY >= 0.15){
-    motor1.set(rightY);
-   } if (rightY  <=-0.15){
-    motor1.set(-leftY);
-   } else {
-    motor1.set(0);
-   }
+    if (rightY >= 0.15){
+      motor1.set(rightY);
+    } if (rightY  <=-0.15){
+      motor1.set(rightY);
+    } else {
+      motor1.set(0);
+    }
 
 
-   if (leftY >= 0.15){
-    motor2.set(leftY);
-   } else if (leftY <= -0.15){
-    motor2.set(-leftY);
-   } else {
-    motor2.set(0);
-   }
-   }
+    if (leftY >= 0.15){
+      motor2.set(leftY);
+    } else if (leftY <= -0.15){
+      motor2.set(leftY);
+    } else {
+      motor2.set(0);
+    }
+  }
 
   /** This function is called once when the robot is disabled. */
   @Override

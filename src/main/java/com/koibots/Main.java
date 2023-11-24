@@ -22,6 +22,7 @@ public final class Main {
        System.out.println(theyDidAte);
        Fish rainbowTrout = new Fish (8, 2, true);
        boolean theyDidAteAgain = rainbowTrout.eat("bug");
+       System.out.println("8");
    }
 
 

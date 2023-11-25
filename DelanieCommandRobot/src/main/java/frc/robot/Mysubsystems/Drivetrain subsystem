@@ -1,0 +1,16 @@
+public class TankDrive extends SubsystemBase { //im so glad it does.
+
+    private static TankDrive TankDrive = new TankDrive();
+    
+    private TankDrive() {}
+
+    public static TankDrive get() {
+        return TankDrive;
+     }
+
+    public TankDrive() {}
+
+    @Override
+    public void periodic() {
+    }
+}

@@ -1,0 +1,30 @@
+package com.koibots.commands;
+
+import frc.robot.subsystems;
+import java.TankDriveSubsystem;
+import edu.wpi.first.wpilibj2.command.CommandBase;
+
+class Drive extends CommandBase {
+    private final Drivetrain m_DriveTrain;
+
+    public Drive(Drivetrain m_DriveTrain) {
+        m_DriveTrain = Drivetrain.get(TankDrive TankDrive);
+        addRequirements(TankDrive.get());
+    }
+
+    public Drive
+
+    public void
+    
+    @Override
+    public void initialize() {}
+    
+    @Override
+    public void execute() {}
+    
+    @Override
+    public boolean isFinished() {}
+    
+    @Override
+    public void end(boolean interrupted) {}
+}

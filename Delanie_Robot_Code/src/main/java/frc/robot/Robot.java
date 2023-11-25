@@ -29,7 +29,7 @@ public class Robot extends TimedRobot {
   RelativeEncoder encoder2;
 
   XboxController controller;
-  
+
   double rightY;
   double leftY;
 
@@ -104,18 +104,18 @@ public class Robot extends TimedRobot {
     leftY = controller.getLeftY();
 
     if (rightY >= 0.15){
-      motor1.set(rightY);
+      motor1.set(rightY * .33);
     } if (rightY  <=-0.15){
-      motor1.set(rightY);
+      motor1.set(rightY *.33);
     } else {
       motor1.set(0);
     }
 
 
     if (leftY >= 0.15){
-      motor2.set(leftY);
+      motor2.set(leftY * .33);
     } else if (leftY <= -0.15){
-      motor2.set(leftY);
+      motor2.set(leftY * .33);
     } else {
       motor2.set(0);
     }

@@ -31,20 +31,20 @@ public class RobotContainer {
 
 
   private void configureBindings() {
-    InstantCommand aButtonCommand = new InstantCommand(() -> TankDrive.get().setBrakeMode());
-    InstantCommand bButtonCommand = new InstantCommand(() -> TankDrive.get().setCoastMode());
+    InstantCommand brakeModeCommand = new InstantCommand(() -> TankDrive.get().setBrakeMode());
+    InstantCommand coastModeCommand = new InstantCommand(() -> TankDrive.get().setCoastMode());
 
     Trigger aButton = controller.a();
     Trigger bButton = controller.b();
 
-    aButton.onTrue(aButtonCommand);
-    bButton.onTrue(bButtonCommand);
+    aButton.onTrue(brakeModeCommand);
+    bButton.onTrue(coastModeCommand);
 
 
     TankDrive.get().setDefaultCommand(
       new Drive(
-        controller.getLeftY(),
-        controller.getRightY()
+        () -> controller.getLeftY(),
+        () -> controller.getRightY()
       )
     );
   }

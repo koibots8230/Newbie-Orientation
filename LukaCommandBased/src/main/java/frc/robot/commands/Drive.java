@@ -5,6 +5,9 @@
 package frc.robot.commands;
 
 import frc.robot.subsystems.TankDrive;
+
+import java.util.function.DoubleSupplier;
+
 import edu.wpi.first.wpilibj2.command.CommandBase;
 
 /** An example command that uses an example subsystem. */
@@ -12,7 +15,10 @@ public class Drive extends CommandBase {
   private double leftSpeed;
   private double rightSpeed;
 
-  public Drive(double leftSpeed, double rightSpeed) {
+  public Drive(DoubleSupplier leftSpeed, DoubleSupplier rightSpeed) {
+    this.leftSpeed = leftSpeed.getAsDouble();
+    this.rightSpeed = rightSpeed.getAsDouble();
+
     addRequirements(TankDrive.get());
   }
 

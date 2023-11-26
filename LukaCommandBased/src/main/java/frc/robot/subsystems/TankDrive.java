@@ -4,10 +4,8 @@
 
 package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj2.command.CommandBase;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import com.revrobotics.CANSparkMax;
-import com.revrobotics.RelativeEncoder;
 import com.revrobotics.CANSparkMax.IdleMode;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
@@ -26,9 +24,6 @@ public class TankDrive extends SubsystemBase {
   private final CANSparkMax motorL;
   private final CANSparkMax motorR;
 
-  private final RelativeEncoder encoderL;
-  private final RelativeEncoder encoderR;
-
   private TankDrive() {
       motorL = new CANSparkMax(
           Constants.LEFT_MOTOR_PORT,
@@ -39,19 +34,17 @@ public class TankDrive extends SubsystemBase {
           MotorType.kBrushless
       );
 
-      motorL.setIdleMode(IdleMode.kBrake);
-      motorR.setIdleMode(IdleMode.kBrake);
-
-      encoderL = motorL.getEncoder();
-      encoderR = motorR.getEncoder();
-
-      encoderL.setPosition(0);
-      encoderR.setPosition(0);
+      motorL.setIdleMode(IdleMode.kCoast);
+      motorR.setIdleMode(IdleMode.kCoast);
   }
 
   public void setSpeed(double leftSpeed, double rightSpeed) {
-    motorL.set(leftSpeed);
-    motorR.set(rightSpeed);
+    motorL.set(checkDeadzone(leftSpeed));
+    motorR.set(checkDeadzone(rightSpeed));
+  }
+
+  public double checkDeadzone(double number) {
+    return Math.abs(number) < 0.15 ? 0.0 : number;
   }
 
   public void setCoastMode() {

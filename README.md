@@ -25,7 +25,7 @@ This is to teach you the basics on how to program in java, and more specifically
 7. [x] [Object Oriented Programming](exercises/OOP.md)
 8. [x] [Extras](exercises/Extras.md)
 9. [x] [Hello Robot](exercises/HelloRobot.md)
-10. [Motors & Encoders](exercises/MotorsAndEncoders.md)
+10. [x] [Motors & Encoders](exercises/MotorsAndEncoders.md)
 11. [Tank Drive](exercises/TankDrive.md)
 12. [Command-Based Programming](exercises/CommandBased.md)
 

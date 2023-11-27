@@ -12,12 +12,12 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 
 /** An example command that uses an example subsystem. */
 public class Drive extends CommandBase {
-  private double leftSpeed;
-  private double rightSpeed;
+  private DoubleSupplier leftSpeed;
+  private DoubleSupplier rightSpeed;
 
   public Drive(DoubleSupplier leftSpeed, DoubleSupplier rightSpeed) {
-    this.leftSpeed = leftSpeed.getAsDouble();
-    this.rightSpeed = rightSpeed.getAsDouble();
+    this.leftSpeed = leftSpeed;
+    this.rightSpeed = rightSpeed;
 
     addRequirements(TankDrive.get());
   }
@@ -30,7 +30,10 @@ public class Drive extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    TankDrive.get().setSpeed(leftSpeed, rightSpeed);
+    TankDrive.get().setSpeed(
+      leftSpeed.getAsDouble(), 
+      rightSpeed.getAsDouble()
+    );
   }
 
   // Called once the command ends or is interrupted.

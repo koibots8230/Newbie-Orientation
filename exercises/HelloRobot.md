@@ -6,7 +6,7 @@ Robotics is super fun, but we **have to be safe**. Unsafe programming can very q
 
 ## Lesson/Instructions
 
-Ok, now that you know the basics, we get to work with FRC code now :confetti_ball:! Once we get to the tank drive lesson, you'll even get to run code on a robot. But, first, we have to create a project.
+Ok, now that y
 
 ### Creating a Robot Project
 

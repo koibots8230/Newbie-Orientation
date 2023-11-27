@@ -9,6 +9,7 @@ import com.revrobotics.RelativeEncoder;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj.motorcontrol.MotorController;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -19,16 +20,17 @@ public class Robot extends TimedRobot {
   private String m_autoSelected;
   private final SendableChooser<String> m_chooser = new SendableChooser<>();
 
-  CANSparkMax motor = new CANSparkMax(1, MotorType.kBrushless);
-  CANSparkMax motor2 = new CANSparkMax(2, MotorType.kBrushless);
-  RelativeEncoder encoder = motor.getAlternateEncoder(1);
+  private XboxController controller = new XboxController(0);
+  private CANSparkMax motor = new CANSparkMax(0, MotorType.kBrushless);
+  private CANSparkMax motor2 = new CANSparkMax(1, MotorType.kBrushless);
+  private RelativeEncoder encoder1 = motor.getEncoder();
+  private RelativeEncoder encoder2 = motor.getEncoder();
 
   @Override
   public void robotInit() {
     m_chooser.setDefaultOption("Default Auto", kDefaultAuto);
     m_chooser.addOption("My Auto", kCustomAuto);
     SmartDashboard.putData("Auto choices", m_chooser);
-    motor2.follow(motor);
   }
 
   @Override
@@ -55,15 +57,16 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopInit() {
-    encoder.setPosition(0);
-    encoder.setPositionConversionFactor(2);
+    encoder1.setPositionConversionFactor(1);
+    encoder1.setPosition(0);
+    encoder2.setPosition(0);
+    motor2.follow(motor);
   }
 
   @Override
   public void teleopPeriodic() {
-    motor.set(0.5);
     while (true) {
-      System.out.println(encoder.getPosition());
+      motor.set(controller.getLeftY());
     }
   }
 

@@ -1,30 +1,41 @@
 package com.koibots;
 
 import java.lang.System;
-import java.util.HashMap;
-
-import com.koibots.Constants;
+import java.util.Random;
+//import java.util.HashMap;
+// import java.util.Scanner;
+//import com.koibots.Constants;
 
 public final class Main {
+    public static int Number = 0;
     public static void main(String... args) {
-        int intNumber = 150;
-        System.out.println("Jake is a cutie.");
-        if (intNumber == 3) {
-           System.out.println("Java is hard.");
-        } else if (intNumber % 2 == 1) {
-            System.out.println("Carson finally comes to a meeting!");
-        } else {
-            System.out.println("Anna is very pretty.");
+        int x = 10;
+        while (x >= 0) {
+            System.out.println(x);
+            x--;
         }
-         HashMap<Integer, String> FRCTeamNames = new HashMap<Integer, String>();
-
-        FRCTeamNames.put(8230, "Koibots");
-        FRCTeamNames.put(4099, "Falcons");
-        FRCTeamNames.put(5115, "Night Riders");
-        FRCTeamNames.put(401, "Copperhead robotics");
-        FRCTeamNames.put(2363, "Triple Helix");
+        Random rand = new Random();
+        int[] daList = {1, 10, 2, 8, 3, 4, 5, 9, 6, 7};
+        for (int i = 0; i < daList.length; i++) {
+           daList[i] = rand.nextInt(10);
+            System.out.println(daList[i]);
+        }
         
-        String teamname = FRCTeamNames.get(8230);
-        System.out.println(teamname);
+        // Scanner in = new Scanner(System.in);
+        // System.out.println("Enter a number:");
+        // while (true){
+        //     if (in.hasNextInt()){
+        //         Number = in.nextInt();
+        //         in.nextLine();
+        //         if (Number == 8230){
+        //             System.out.println("\ncorrect");
+        //             break;
+        //         } else {
+        //             System.out.println("\nwrong");
+        //         }
+        //     }
+        // }
+        // in.close();
+
     }
 }

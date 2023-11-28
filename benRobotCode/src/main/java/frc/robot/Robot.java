@@ -65,9 +65,7 @@ public class Robot extends TimedRobot {
 
   @Override
   public void teleopPeriodic() {
-    while (true) {
-      motor.set(controller.getLeftY());
-    }
+    motor.set(controller.getLeftY());
   }
 
   @Override

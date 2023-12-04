@@ -18,13 +18,18 @@ public class DTSubsystem extends SubsystemBase { //im so glad it does.
     private static DTSubsystem DriveTrain = new DTSubsystem();
 
 
-    private void DriveTrain(){
-        final CANSparkMax rightMotor = new CANSparkMax(1, MotorType.kBrushless);
-        final CANSparkMax leftMotor = new CANSparkMax(2, MotorType.kBrushless);
+    private DTSubsystem(){
+        rightMotor = new CANSparkMax(1, MotorType.kBrushless);
+        leftMotor = new CANSparkMax(2, MotorType.kBrushless);
     }
 
     public static DTSubsystem get() {
         return DriveTrain;
+    }
+  
+    public void drive(double rightJoystick, double leftJoystick){
+        leftMotor.set(leftJoystick);
+        rightMotor.set(rightJoystick);
     }
 
     public void setIdleCoastMode(){

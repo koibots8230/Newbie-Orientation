@@ -44,6 +44,9 @@ public class RobotContainer {
     buttonA.onTrue(new InstantCommand(() -> DTSubsystem.get().setIdleBrakeMode()));
     buttonB.onTrue(new InstantCommand(() -> DTSubsystem.get().setIdleCoastMode()));
 
+    rightJoystick = () -> driverController.getRightY();
+    leftJoystick = () -> driverController.getLeftY();
+
     DTSubsystem.get().setDefaultCommand(
       new DrivetrainCommands(rightJoystick, leftJoystick)
     );

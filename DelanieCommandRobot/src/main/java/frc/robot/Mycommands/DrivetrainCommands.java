@@ -21,17 +21,13 @@ public class DrivetrainCommands extends CommandBase{
     private double deadzoneChecker (double joystickValue){
         return (Math.abs(joystickValue) <= 0.15) ? 0 : joystickValue;
     }
-     
-    public void drive(DoubleSupplier rightJoystick, DoubleSupplier leftJoystick){
-        leftMotor.set(deadzoneChecker(rightJoystick.getAsDouble()));
-        rightMotor.set(deadzoneChecker(leftJoystick.getAsDouble()));
-    }
+
     
     public void execute (){
-        /*DTSubsystem.get().drive(
-            rightMotor(deadzoneChecker(rightJoystick.getAsDouble())),
-            leftMotor(deadzoneChecker(leftJoystick.getAsDouble()))
-        );*/
+        DTSubsystem.get().drive(
+            deadzoneChecker(rightJoystick.getAsDouble()),
+            deadzoneChecker(leftJoystick.getAsDouble())
+        );
     } 
 
     @Override

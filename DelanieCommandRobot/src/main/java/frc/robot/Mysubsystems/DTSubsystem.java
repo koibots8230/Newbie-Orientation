@@ -4,12 +4,16 @@ import com.revrobotics.CANSparkMax.IdleMode;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
+import java.util.function.DoubleSupplier;
+
 import com.revrobotics.CANSparkMax;
 
 
 public class DTSubsystem extends SubsystemBase { //im so glad it does.
     CANSparkMax rightMotor;
     CANSparkMax leftMotor;
+    DoubleSupplier rightJoystick;
+    DoubleSupplier leftJoystick;
 
     private static DTSubsystem DriveTrain = new DTSubsystem();
 
@@ -21,11 +25,6 @@ public class DTSubsystem extends SubsystemBase { //im so glad it does.
 
     public static DTSubsystem get() {
         return DriveTrain;
-    }
-     
-    public void drive(double leftSpeed, double rightSpeed){
-        leftMotor.set(leftSpeed);
-        rightMotor.set(rightSpeed);
     }
 
     public void setIdleCoastMode(){

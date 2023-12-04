@@ -5,6 +5,8 @@
 package frc.robot;
 
 import frc.robot.Constants.OperatorConstants;
+import frc.robot.Mycommands.DrivetrainCommands;
+import java.util.function.DoubleSupplier;
 //import frc.robot.commands.Autos;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
@@ -25,8 +27,8 @@ public class RobotContainer {
   private CommandXboxController driverController =
     new CommandXboxController(OperatorConstants.kDriverControllerPort); //(fill this in!)
   
-  double rightY;
-  double leftY;
+  DoubleSupplier rightJoystick;
+  DoubleSupplier leftJoystick;
   Trigger buttonA;
   Trigger buttonB;
   
@@ -39,12 +41,12 @@ public class RobotContainer {
     buttonA = driverController.a();
     buttonB = driverController.b();
 
-    buttonA.whileTrue(new InstantCommand(() -> DTSubsystem.get().setIdleBrakeMode()));
-    buttonB.whileTrue(new InstantCommand(() -> DTSubsystem.get().setIdleCoastMode()));
-  }
+    buttonA.onTrue(new InstantCommand(() -> DTSubsystem.get().setIdleBrakeMode()));
+    buttonB.onTrue(new InstantCommand(() -> DTSubsystem.get().setIdleCoastMode()));
 
-  private void RobotPeriodic(){
-    CommandScheduler.getInstance().run();
+    DTSubsystem.get().setDefaultCommand(
+      new DrivetrainCommands(rightJoystick, leftJoystick)
+    );
   }
 
    /* @return the command to run in autonomous */

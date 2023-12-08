@@ -6,6 +6,8 @@ import java.util.Random;
 // import java.util.Scanner;
 //import com.koibots.Constants;
 
+import javax.xml.validation.ValidatorHandler;
+
 public final class Main {
     private static Main main = new Main();
 
@@ -13,6 +15,7 @@ public final class Main {
     public static void main(String... args) {
         Shangwen shangwen = main.new Shangwen("purple", true);
         System.out.println(shangwen.Art("robin"));
+       shangwen.money(); 
     }
 
     class Shangwen {
@@ -26,6 +29,13 @@ public final class Main {
 
         public String Art(String Bird) {
             return Bird;
-        }
+
+      }
+    
+        public void money() {
+        Random moneyRandom = new Random();
+        int sumofmoney = moneyRandom.nextInt(10000);
+        System.out.println(sumofmoney);
     }
+} 
 }

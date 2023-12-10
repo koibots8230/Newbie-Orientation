@@ -4,19 +4,24 @@ package frc.robot;
 
 import com.koibots.Constants;
 import com.revrobotics.CANSparkMax;
-import com.revrobotics.RelativeEncoder;
 import com.revrobotics.CANSparkMax.IdleMode;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
-
+import com.revrobotics.RelativeEncoder;
 
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.XboxController;
 
 
 public class Robot extends TimedRobot {
   
-  private final CANSparkMax motor = new CANSparkMax(Constants.MOTOR_PORT, MotorType.kBrushless);
-  private final CANSparkMax motor2 = new CANSparkMax(Constants.MOTOR_PORT2, MotorType.kBrushless);
-  private final RelativeEncoder encoder = motor.getEncoder();
+  
+  private final CANSparkMax Leftmotor = new CANSparkMax(Constants.LeftMOTOR_PORT, MotorType.kBrushless);
+  private final CANSparkMax Rightmotor2 = new CANSparkMax(Constants.RightMOTOR_PORT2, MotorType.kBrushless);
+  private final RelativeEncoder Leftencoder = Leftmotor.getEncoder();
+  private final RelativeEncoder rightEncoder = Rightmotor2.getEncoder();
+  private final XboxController controller = new XboxController(0);
+
+  
     
   
   
@@ -26,18 +31,34 @@ public class Robot extends TimedRobot {
   /** This function is called once when teleop is enabled. */
   @Override
   public void teleopInit() {
-    motor2.follow(motor);
-    motor.setIdleMode(IdleMode.kBrake);
-    motor2.setIdleMode(IdleMode.kBrake);
-    encoder.setPositionConversionFactor(2);
-    encoder.setPosition(0);
+    Leftmotor.setIdleMode(IdleMode.kBrake);
+    Rightmotor2.setIdleMode(IdleMode.kBrake);
+    rightEncoder.setPosition(0);
+    Leftencoder.setPosition(0);
   }
 
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    motor.set(.50);
-    System.out.println(encoder.getPosition());
+    Leftmotor.set(.50);
+    Rightmotor2.set(.50);
+    System.out.println(Leftencoder.getPosition());
+    double rp = controller.getRightY();
+    rightEncoder.setPosition(rp);
+    double lp= controller.getLeftY();
+    Leftencoder.setPosition(lp);
+
+    if (Math.abs(rp) < Constants.DEAD_SPACE) {
+      rp = 0;
+    }
+
+    
+    if (Math.abs(lp) < Constants.DEAD_SPACE){
+      lp = 0;
+    }
+
+
+
   
   }
 
@@ -45,7 +66,7 @@ public class Robot extends TimedRobot {
   @Override
   public void disabledInit() {}
 
-  /** This function is called periodically when disabled. */
+  /*t This function is called periodically when disabled. */
   @Override
   public void disabledPeriodic() {}
 

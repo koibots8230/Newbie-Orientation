@@ -162,6 +162,8 @@ We have the pose now, but, there's something I haven't told you. Everything so f
 1. Not completely overload the RIO with calculations
 2. Optimize the pose estimation to minimize latency(we'll get into this later)
 
+To transfer the data to the RIO, we use something called Network Tables, which is a library provided by WPILib to network between computers. NetworkTables is also the thing that dashboards use to display data from the robot.
+
 ## Working it In
 
 Now that we have our pose on the RIO, we have to work it in with our odometry, so both can run in tandem, allowing for greater accuracy. 

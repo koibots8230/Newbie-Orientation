@@ -10,6 +10,7 @@ import java.util.function.DoubleSupplier;
 //import frc.robot.commands.Autos;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import edu.wpi.first.wpilibj2.command.InstantCommand;
+import edu.wpi.first.wpilibj2.command.button.CommandPS4Controller;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger; //apparently the trigger is deprecated???? what????  not in the docs
 import frc.robot.Mysubsystems.DTSubsystem;
@@ -22,15 +23,19 @@ import frc.robot.Mysubsystems.DTSubsystem;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   final DTSubsystem m_DriveTrain = DTSubsystem.get();
-  
 
   private CommandXboxController driverController =
-    new CommandXboxController(OperatorConstants.kDriverControllerPort); //(fill this in!)
+    new CommandXboxController(OperatorConstants.kDriverControllerPort); //(fill this in constants!!!!)
+
+  private CommandPS4Controller operatorController = 
+    new CommandPS4Controller(OperatorConstants.kOperatorControllerPort);//idk if this is the right port!!!!!!!
   
-  DoubleSupplier rightJoystick;
-  DoubleSupplier leftJoystick;
-  Trigger buttonA;
-  Trigger buttonB;
+  DoubleSupplier rightDriverJoystick;
+  DoubleSupplier leftDriverJoystick;
+  Trigger driverButtonA;
+  Trigger driverButtonB;
+  DoubleSupplier rightOperatorJoystick;
+  DoubleSupplier leftOperatorJoystick;
   
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -38,17 +43,21 @@ public class RobotContainer {
   }
 
   private void configureBindings() {
-    buttonA = driverController.a();
-    buttonB = driverController.b();
+    driverButtonA = driverController.a();
+    driverButtonB = driverController.b();
 
-    buttonA.onTrue(new InstantCommand(() -> DTSubsystem.get().setIdleBrakeMode()));
-    buttonB.onTrue(new InstantCommand(() -> DTSubsystem.get().setIdleCoastMode()));
+    Trigger slowDown = operatorController.triangle();
+    slowDown.onTrue(new InstantCommand(() -> DTSubsystem.get().slowYourRoll())); ///hhhhhhh
+    slowDown.onFalse(new InstantCommand(() -> DTSubsystem.get().unSlowYourRoll()));
 
-    rightJoystick = () -> driverController.getRightY();
-    leftJoystick = () -> driverController.getLeftY();
+    driverButtonA.onTrue(new InstantCommand(() -> DTSubsystem.get().setIdleBrakeMode()));
+    driverButtonB.onTrue(new InstantCommand(() -> DTSubsystem.get().setIdleCoastMode()));
+
+    rightDriverJoystick = () -> driverController.getRightY();
+    leftDriverJoystick = () -> driverController.getLeftY();
 
     DTSubsystem.get().setDefaultCommand(
-      new DrivetrainCommands(rightJoystick, leftJoystick)
+      new DrivetrainCommands(rightDriverJoystick, leftDriverJoystick)
     );
   }
 

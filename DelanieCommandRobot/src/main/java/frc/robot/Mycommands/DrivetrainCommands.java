@@ -8,14 +8,15 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Mysubsystems.DTSubsystem;
 
 public class DrivetrainCommands extends CommandBase{
-    DoubleSupplier rightJoystick;
-    DoubleSupplier leftJoystick;
+    DoubleSupplier rightDriverJoystick;
+    DoubleSupplier leftDriverJoystick;
     CANSparkMax rightMotor;
     CANSparkMax leftMotor;
+    double speedMultiplied;
 
-    public DrivetrainCommands (DoubleSupplier rightJoystick, DoubleSupplier leftJoystick){
-        this.rightJoystick = rightJoystick;
-        this.leftJoystick = leftJoystick;
+    public DrivetrainCommands (DoubleSupplier rightDriverJoystick, DoubleSupplier leftDriverJoystick){
+        this.rightDriverJoystick = rightDriverJoystick;
+        this.leftDriverJoystick = leftDriverJoystick;
     }
     
     private double deadzoneChecker (double joystickValue){
@@ -25,9 +26,9 @@ public class DrivetrainCommands extends CommandBase{
     
     public void execute (){
         DTSubsystem.get().drive(
-            deadzoneChecker(rightJoystick.getAsDouble()),
-            deadzoneChecker(leftJoystick.getAsDouble())
-        );
+            deadzoneChecker((Math.pow(rightDriverJoystick.getAsDouble(), 2))* speedMultiplied),
+            deadzoneChecker((Math.pow(leftDriverJoystick.getAsDouble(), 2)) * speedMultiplied));
+            addRequirements(DTSubsystem.get());
     } 
 
     @Override

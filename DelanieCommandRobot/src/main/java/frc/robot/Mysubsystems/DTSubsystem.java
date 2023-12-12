@@ -12,8 +12,10 @@ import com.revrobotics.CANSparkMax;
 public class DTSubsystem extends SubsystemBase { //im so glad it does.
     CANSparkMax rightMotor;
     CANSparkMax leftMotor;
-    DoubleSupplier rightJoystick;
-    DoubleSupplier leftJoystick;
+    DoubleSupplier rightDriverJoystick;
+    DoubleSupplier leftDriverJoystick;
+    DoubleSupplier rightOperatorJoystick;
+    DoubleSupplier leftOperatorJoystick;
 
     private static DTSubsystem DriveTrain = new DTSubsystem();
 
@@ -27,9 +29,9 @@ public class DTSubsystem extends SubsystemBase { //im so glad it does.
         return DriveTrain;
     }
   
-    public void drive(double rightJoystick, double leftJoystick){
-        leftMotor.set(leftJoystick);
-        rightMotor.set(rightJoystick);
+    public void drive(double rightDriverJoystick, double leftDriverJoystick){
+        leftMotor.set(leftDriverJoystick);
+        rightMotor.set(rightDriverJoystick);
     }
 
     public void setIdleCoastMode(){
@@ -40,5 +42,12 @@ public class DTSubsystem extends SubsystemBase { //im so glad it does.
     public void setIdleBrakeMode(){
         leftMotor.setIdleMode(IdleMode.kBrake);
         rightMotor.setIdleMode(IdleMode.kBrake);
+    }
+
+    public void slowYourRoll() {
+        double speedMultiplied = 0.33;
+    }
+    public void unSlowYourRoll(){
+        double speedMultiplied = 1;
     }
 }

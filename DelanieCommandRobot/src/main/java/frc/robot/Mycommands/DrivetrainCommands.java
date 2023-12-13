@@ -13,6 +13,7 @@ public class DrivetrainCommands extends CommandBase{
     CANSparkMax rightMotor;
     CANSparkMax leftMotor;
     double speedMultiplied;
+    int sign;
 
     public DrivetrainCommands (DoubleSupplier rightDriverJoystick, DoubleSupplier leftDriverJoystick){
         this.rightDriverJoystick = rightDriverJoystick;
@@ -21,7 +22,8 @@ public class DrivetrainCommands extends CommandBase{
     }
     
     private double deadzoneChecker (double joystickValue){
-        return (Math.abs(joystickValue) <= 0.15) ? 0 : joystickValue;
+        sign = (joystickValue < 0) ? -1 : 1;
+        return ((sign*(Math.abs(joystickValue)) <= 0.15)) ? 0 : joystickValue;
     }
 
     

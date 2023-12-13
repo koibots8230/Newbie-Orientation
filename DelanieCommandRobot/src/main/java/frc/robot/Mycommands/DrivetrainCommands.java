@@ -17,6 +17,7 @@ public class DrivetrainCommands extends CommandBase{
     public DrivetrainCommands (DoubleSupplier rightDriverJoystick, DoubleSupplier leftDriverJoystick){
         this.rightDriverJoystick = rightDriverJoystick;
         this.leftDriverJoystick = leftDriverJoystick;
+        addRequirements(DTSubsystem.get());
     }
     
     private double deadzoneChecker (double joystickValue){

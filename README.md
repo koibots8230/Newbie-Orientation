@@ -54,11 +54,9 @@ This is to teach you the basics on how to program in java, and more specifically
 **More Advanced Concepts**
 
 13.  [Odometry](exercises/Odometry.md) 
-14.  [Simulation & Logging](exercises/SimulationAndLogging.md) **Incomplete**
-15.  [Autonomous](exercises/Autonomous.md)
-16.  [PID Loops](exercises/PIDLoops.md)
-17.  [Kinematics](exercises/Kinematics.md) **Incomplete**
-18.  [Computer Vision](exercises/Vision.md)
+14.  [Autonomous](exercises/Autonomous.md)
+15.  [PID Loops](exercises/PIDLoops.md)
+16.  [Computer Vision](exercises/Vision.md) **Optional** but is something that is happening
 
 ---
 

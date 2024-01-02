@@ -138,11 +138,11 @@ Now onto the *c*s. The *c*s represent the optical center of the camera. The opti
 
 Ok, so how do we get the intrinsic parameters? Well, luckily for us, OpenCV, a computer vision library, provides an easy and very accurate way to do this. 
 
-The way OpenCV calibrates is by using a printed out standardized checkerboard. It finds the corners of the checkerboard in the image, and compares the distance in the image to the distance that it knows to be true, then solves for distortion coefficients. The more images it gets, the more it can refine it's data to be more accurate, and the more accurate your pose estimation will be. 10 is a good starting number if you want a basic calibration. 
+The way OpenCV calibrates is by using a printed out standardized checkerboard. It finds the corners of the checkerboard in the image, and compares the distance in the image to the distance that it knows to be true, then solves for distortion coefficients. The more images it gets, the more it can refine it's data to be more accurate, and the more accurate your pose estimation will be. 12 is a good starting number if you want a basic calibration, but for the robot, we do around 400-500.
 
 ### Estimating the Relative Pose
 
-Solving for the pose gets into math that we don't learn until senior year, and I only really have a loose grasp of how it does it. Suffice it to say, it does fancy math, and you get the translation and rotation of the camera relative to the apriltag.
+Solving for the pose gets into math that we don't learn until senior year, and I only really have a loose grasp of how it does it. Suffice it to say, it does fancy math, and you get the translation and rotation of the apriltag relative to the camera.
 
 ## Putting it All Together
 

@@ -203,7 +203,7 @@ poseEstimator.addVisionMeasurement(
     timestamp
 );
 ```
-You might notice that we include a timestamp in this. This may seem strange, but remember that vision computations take time. To us, they don't take much, around 100-200ms, but to a computer thats a significant amount of time. 
+You might notice that we include a timestamp in this. This may seem strange, but remember that vision computations take time. To us, they don't take much, around 50ms, but the computer needs to be as accurate as possible, so that's not an insignifigant amount of time. 
 
 To explain what the timestamp does, I have to explain how the pose estimator works. When we call `update()`, it works just like odometry, save one thing. It keeps a short buffer of the odometry estimates and their timestamps.
 

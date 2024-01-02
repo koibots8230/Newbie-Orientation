@@ -138,6 +138,10 @@ Now onto the *c*s. The *c*s represent the optical center of the camera. The opti
 
 *Note*: A camera with a lens does not actually have an optical center, but it still models the camera's optics quite closely. 
 
+### Distortion Coefficents
+
+The other thing we need are distortion coefficents. These are set of 5 numbers represented as *k*<sub>1</sub>, *k*<sub>2</sub>, *p*<sub>1</sub>, *p*<sub>2</sub>, and *k*<sub>3</sub>. They are used in calculations to represent the distortion.
+
 ### Calibrating the Camera
 
 Ok, so how do we get the intrinsic parameters? Well, luckily for us, OpenCV, a computer vision library, provides an easy and very accurate way to do this. 

@@ -17,7 +17,9 @@ Apriltags, on the other hand, are a set standardized binary(black and white) pat
 
 When we use computer vision, we're looking for two things from the apriltag:
 - It's ID
-- Our pose relative to it
+- It's pose relative to us
+
+With Those, we can get out pose on the field
 
 To accomplish this, we do a few things:
 1. Find the apriltag in the image

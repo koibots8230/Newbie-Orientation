@@ -90,7 +90,9 @@ Even though we already have the ID, we want to do one more thing. To continue on
 
 So, we take the current quads, and compare them against the original, greyscale image. Specifically, we take evenly spaced points on the quads, and compare the gradient. This gets us significantly more accurate corners, which will improve our pose estimation accuracy later on. 
 
-If you are interested, and want to learn more, [here's](https://april.eecs.umich.edu/media/pdfs/wang2016iros.pdf) a paper that goes into more depth on the topic.
+If you are interested, and want to learn more, [here's](https://april.eecs.umich.edu/media/pdfs/wang2016iros.pdf) a paper that goes into more depth on the topic. This isn't the solution we use though, as the one we use doesn't have much documentation on how it works.
+
+Keep in mind this is just one approach. Many different approaches exist, and can vary. Most though, will use similar methods to accomplish this. 
 
 ## Pose Estimation
 
